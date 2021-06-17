@@ -1,0 +1,77 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body{
+	background-color: #151515;
+}
+
+.cen{
+	display: grid;
+	place-items: center;
+}
+
+.whine{
+	background-color: #8A0125;
+	color: white;
+}
+
+.pblack{
+	background-color: #040404;
+}
+
+.bgmehroon{
+	background-color: #6A3837;
+}
+
+.bgmehroon2{
+	background-color: #332220;
+	padding-top: 7vh;
+	width: 100%;
+}
+
+.bgblue{
+	background-color: #524F7A;
+}
+
+.bgblue2{
+	background-color: #2E2D3F; 
+	padding-bottom: 7vh;
+	width: 100%
+}
+
+.bgpurple{
+	background-color: #875C89;
+}
+
+.bgpurple2{
+	background-color: #2E2D3F;
+	padding-top: 7vh;
+	width: 100%;
+}
+
+.bggreen{
+	background-color: #2B6153;
+}
+
+.bggreen2{
+	background-color: #213B35; 
+	padding-bottom: 7vh;
+	width: 100%
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .imh{
+		display: none;
+	}
+	.hg{
+		height: 30vh;
+		
+	}
+}
