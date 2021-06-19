@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from '../../comps/header/Navbar'
-function Err404(){
+function Profile(){
     return(
      <>
         <Navbar/>
-        <h2>Err404</h2>
+        <h2>Profile</h2>
       
      </>
     )
 }
-export default Err404;
+export default Profile;
