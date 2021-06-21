@@ -15,20 +15,10 @@ import {
 
 
 function App() {
-  const [state, setState] = useState("")
-  useEffect(() => {
-      fetch("http://localhost:5000").then(
-          res => setState(res.data)
-      )
-  })
+
   return (
    <>
-   <h1>{state}</h1>
-   <form action="http://localhost:5000/" method="post">
-          <input type="text" name="id" />
-          <input type="password" name="pass" />
-          <button type="submit"> send</button>
-        </form>
+ 
    
   <BrowserRouter>
    <Switch>
