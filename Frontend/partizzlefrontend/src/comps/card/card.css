@@ -1,7 +1,7 @@
 .pblack2 {
   margin: auto;
   display: flex;
-  width: 22rem;
+  width: 26rem;
   margin: auto;
   background-color: #04040498;
   border: 3px solid #272626ce;
@@ -22,14 +22,42 @@
 .cusmar {
   margin-top: 20px;
 }
+@media only Screen and (max-width: 1400px) {
+  .pblack2 {
 
+    width: 22rem;
+  
+  }
+
+}
+@media only Screen and (max-width: 1200px) {
+  .pblack2 {
+
+    width: 25rem;
+  
+  }
+
+}
+@media only Screen and (max-width: 992px) {
+  .pblack2 {
+
+    width: 20rem;
+  
+  }
+
+}
 @media only Screen and (max-width: 768px) {
+  .pblack2 {
+
+    width: 18rem;padding-top: 5px;
+  
+  }
   .cusmar {
     margin-top: 10px;
   }
   .cc {
     width: 18ch;
-    max-height: 8ch;
+    max-height: 7ch;
     overflow: hidden;
     line-height: 20px;
   }
