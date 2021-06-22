@@ -1,6 +1,7 @@
 .pblack2 {
   margin: auto;
   display: flex;
+  
   width: 26rem;
   margin: auto;
   background-color: #04040498;
@@ -8,8 +9,8 @@
 }
 
 .cc {
-  width: 18ch;
-  max-height: 11ch;
+  width: 28ch;
+  max-height: 20ch;
   overflow: hidden;
 }
 
@@ -33,11 +34,23 @@
 @media only Screen and (max-width: 1200px) {
   .pblack2 {
 
-    width: 25rem;
+    width: 18rem;
   
   }
-
+  .img-square-wrapper{
+    width: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+  } .cc {
+    width: 15ch;
+    max-height: 11ch;
+    overflow: hidden;
+  }
+  .mm{
+    width: 100%;
+  }
 }
+
 @media only Screen and (max-width: 992px) {
   .pblack2 {
 
@@ -75,12 +88,58 @@
   }
   .img-square-wrapper{
     width: 100%;
+    height: 100%;
     margin-top: auto;
     margin-bottom: auto;
   } .cc {
     width: 18ch;
     max-height: 13ch;
     overflow: hidden;
+  }
+  .mm{
+    height: 38vh;
+  }
+
+}
+@media only Screen and (max-width: 400px) {
+  .pblack2 {
+font-size: 12px;
+    width: 100%;
+  
+  }
+  .img-square-wrapper{
+    width: 50vw;
+    margin-top: auto;
+    margin-bottom: auto;
+  } .cc {
+    width: 45vw;
+    max-height: 13ch;
+    overflow: hidden;
+  }
+  .mm{
+    width: 80vw;
+  }
+
+}
+@media only Screen and (max-width: 300px) {
+  .pblack2 {
+font-size: 16px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content:center ;
+  }
+  .img-square-wrapper{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+  } .cc {
+    width: 100%;
+    max-height: 13ch;
+    overflow: hidden;
+  }
+  .mm{
+    width: 100%;
+    height: auto;
   }
 
 }

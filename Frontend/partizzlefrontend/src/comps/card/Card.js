@@ -9,7 +9,7 @@ function Card(props) {
           className="img-square-wrapper"
           style={{ height: "100%", backgroundColor: "red" }}
         >
-          <img className="img-fluid my-auto" src={props.w} alt="Card  cap" />
+          <img className="img-fluid my-auto mm" src={props.w} alt="Card  cap" />
         </div>
         <div className="cen p-2">
           <div>
