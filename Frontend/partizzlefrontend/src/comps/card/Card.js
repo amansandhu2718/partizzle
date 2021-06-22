@@ -1,7 +1,9 @@
 import React from "react";
 import "./card.css";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Card(props) {
+  const notify = () => toast("Item Added to cart");
   return (
     <>
       <div className="cusmar pblack2 text-light">
@@ -18,10 +20,11 @@ function Card(props) {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <button className="btn btn-primary mt-2" >ADD TO CART</button>
+            <button className="btn btn-primary mt-2" onClick={notify} >ADD TO CART</button>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 }

@@ -1,3 +1,11 @@
+.Toastify__toast--default{
+  background-color: rgb(59, 59, 59) !important;
+  color: white !important;
+}
+.Toastify__close-button{
+  color: white !important;
+  opacity: 1 !important;
+}
 .pblack2 {
   margin: auto;
   display: flex;
