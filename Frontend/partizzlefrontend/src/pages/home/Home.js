@@ -1,7 +1,5 @@
-import React from "react";
 import "./Home.css";
 import Navbar from "../../comps/header/Navbar";
-
 import Cur from "../../assets/images/cur..bg.png";
 import Cur1 from "../../assets/images/cur..bg1.png";
 import Cur3 from "../../assets/images/cur.3.png";
@@ -12,12 +10,42 @@ import pic2 from "../../assets/images/2.jpeg";
 import pic3 from "../../assets/images/3.jpeg";
 import pic4 from "../../assets/images/4.jpeg";
 import { Link } from "react-router-dom";
+import Helmet from "helmet";
+import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+import "swiper/components/navigation/navigation.min.css";
+import SwiperCore, { Navigation } from "swiper/core";
+
+// install Swiper modules
+SwiperCore.use([Navigation]);
 
 function Home() {
+  // const [count, setCount] = useState(0);
+  // useEffect(() => {
+  //   const swiper = new Swiper(".mySwiper", {
+  //     effect: "coverflow",
+  //     grabCursor: true,
+  //     mousewheel: true,
+  //     centeredSlides: true,
+  //     slidesPerView: "auto",
+  //     coverflowEffect: {
+  //       rotate: 50,
+  //       stretch: 0,
+  //       depth: 100,
+  //       modifier: 1,
+  //       slideShadows: true,
+  //     },
+  //     pagination: {
+  //       el: ".swiper-pagination",
+  //     },
+  //   });
+  //   setCount(swiper);
+  // });
   return (
     <>
       <Navbar />
-
+      <Helmet>{/* <script src={Hello}></script> */}</Helmet>
       <div className="container mt-2">
         <div
           id="carouselExampleFade"
@@ -218,39 +246,24 @@ function Home() {
         <div className="cen ">
           <h3 className="text-light mt-5">BEST SELLERS</h3>
         </div>
-
-        <div className="swiper-container mySwiper">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide">
-              <img className="img-fluid" src={pic1} alt="pics" />
-            </div>
-            <div className="swiper-slide">
-              <img className="img-fluid" src={pic2} alt="pics" />
-            </div>
-            <div className="swiper-slide">
-              <img className="img-fluid" src={pic3} alt="pics" />
-            </div>
-            <div className="swiper-slide">
-              <img className="img-fluid" src={pic4} alt="pics" />
-            </div>
-            <div className="swiper-slide">
-              <img className="img-fluid" src={pic1} alt="pics" />
-            </div>
-            <div className="swiper-slide">
-              <img className="img-fluid" src={pic2} alt="pics" />
-            </div>
-            <div className="swiper-slide">
-              <img className="img-fluid" src={pic3} alt="pics" />
-            </div>
-            <div className="swiper-slide">
-              <img className="img-fluid" src={pic4} alt="pics" />
-            </div>
-            <div className="swiper-slide">
-              <img className="img-fluid" src={pic1} alt="pics" />
-            </div>
-          </div>
+        <Swiper navigation={true} className="mySwiper">
+          <SwiperSlide>
+            <img className="img-fluid" src={pic1} alt="pics" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="img-fluid" src={pic2} alt="pics" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="img-fluid" src={pic3} alt="pics" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="img-fluid" src={pic4} alt="pics" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="img-fluid" src={pic1} alt="pics" />
+          </SwiperSlide>
           <div className="swiper-pagination"></div>
-        </div>
+        </Swiper>
       </div>
 
       <div className="pblack container mt-3 pt-2">
