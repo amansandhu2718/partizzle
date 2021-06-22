@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+a{
+  color: white !important;
+}
 body {
   background-color: #151515;
 }
@@ -46,11 +48,11 @@ body {
 }
 
 .bgblue {
-  background-color: #0c038ece;
+  background-color: #0D6EFD;
 }
 
 .bgblue:hover {
-  box-shadow: 2px 2px 60px #0f04add5;
+  box-shadow: 2px 2px 60px #0D6EFD;
 }
 
 .bgblue2 {

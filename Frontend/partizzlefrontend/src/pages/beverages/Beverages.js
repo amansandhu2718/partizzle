@@ -3,7 +3,7 @@ import Card from "../../comps/card/Card";
 import Navbar from "../../comps/header/Navbar";
 import "./beverages.css";
 import W3 from "../../assets/images/w3.jpeg";
-import ABC from "../../assets/images/cur..bg1.png";
+import ABC from "../../assets/images/drinkbg.png";
 
 function Beverages() {
   return (

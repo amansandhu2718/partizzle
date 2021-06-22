@@ -7,7 +7,10 @@
   background-color: #04040498;
   border: 3px solid #272626ce;
 }
-
+.mybtn{
+  background-color: #5768b1;
+  color: white;
+}
 .cc {
   width: 28ch;
   max-height: 20ch;
