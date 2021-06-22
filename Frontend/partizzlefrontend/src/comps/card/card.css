@@ -1,0 +1,36 @@
+.pblack2 {
+  margin: auto;
+  display: flex;
+  width: 22rem;
+  margin: auto;
+  background-color: #04040498;
+  border: 3px solid #272626ce;
+}
+
+.cc {
+  width: 18ch;
+  max-height: 11ch;
+  overflow: hidden;
+}
+
+.cen {
+  display: grid !important;
+  place-items: center !important;
+  text-align: center;
+}
+
+.cusmar {
+  margin-top: 20px;
+}
+
+@media only Screen and (max-width: 768px) {
+  .cusmar {
+    margin-top: 10px;
+  }
+  .cc {
+    width: 18ch;
+    max-height: 8ch;
+    overflow: hidden;
+    line-height: 20px;
+  }
+}
