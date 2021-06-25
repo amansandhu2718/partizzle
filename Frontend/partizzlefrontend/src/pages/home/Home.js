@@ -9,39 +9,32 @@ import pic1 from "../../assets/images/1.jpeg";
 import pic2 from "../../assets/images/2.jpeg";
 import pic3 from "../../assets/images/3.jpeg";
 import pic4 from "../../assets/images/4.jpeg";
+import V1 from "../../assets/vids/wine.mp4";
+import V2 from "../../assets/vids/My Video.mp4";
 import { Link } from "react-router-dom";
 import Helmet from "helmet";
-import React, { useState, useEffect } from "react";
+
+import React, { useRef, useState } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
-import SwiperCore, { Navigation } from "swiper/core";
+import { Autoplay, Navigation } from "swiper/core";
+import "swiper/swiper.min.css";
+import "swiper/components/effect-coverflow/effect-coverflow.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import SwiperCore, {
+  EffectCoverflow,
+  Pagination,
+  Mousewheel,
+} from "swiper/core";
 
-// install Swiper modules
-SwiperCore.use([Navigation]);
+SwiperCore.use([EffectCoverflow, Pagination, Mousewheel]);
 
 function Home() {
-  // const [count, setCount] = useState(0);
-  // useEffect(() => {
-  //   const swiper = new Swiper(".mySwiper", {
-  //     effect: "coverflow",
-  //     grabCursor: true,
-  //     mousewheel: true,
-  //     centeredSlides: true,
-  //     slidesPerView: "auto",
-  //     coverflowEffect: {
-  //       rotate: 50,
-  //       stretch: 0,
-  //       depth: 100,
-  //       modifier: 1,
-  //       slideShadows: true,
-  //     },
-  //     pagination: {
-  //       el: ".swiper-pagination",
-  //     },
-  //   });
-  //   setCount(swiper);
-  // });
+  const seekss = (e) => {
+    // e.preventDefault();
+  };
   return (
     <>
       <Navbar />
@@ -56,22 +49,19 @@ function Home() {
             <div className="carousel-item active pblack">
               <div className="p-3">
                 <div style={{ position: "relative" }} className="hg">
-                  <img src={Cur} className="imh img-fluid" alt="img" />
-                  <div
+                  <video
+                    className="img-fluid "
+                    preload={Autoplay}
                     style={{
-                      position: "absolute",
-                      top: "0",
-                      width: "100%",
-                      height: " 100%",
+                      pointerEvents: "none",
                     }}
-                  >
-                    <div
-                      className="cen"
-                      style={{ width: "100%", height: "100%" }}
-                    >
-                      <div className="cen"></div>
-                    </div>
-                  </div>
+                    onPlay={seekss}
+                    autoPlay={true}
+                    muted
+                    playsinline
+                    controls={false}
+                    src={V2}
+                  ></video>
                 </div>
               </div>
             </div>
@@ -79,21 +69,6 @@ function Home() {
               <div className="p-3">
                 <div style={{ position: "relative" }} className="hg">
                   <img src={Cur1} className="imh img-fluid" alt="pics" />
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "0",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                  >
-                    <div
-                      className="cen"
-                      style={{ width: "100%", height: "100%" }}
-                    >
-                      <div className="cen"></div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -101,21 +76,6 @@ function Home() {
               <div className="p-3">
                 <div style={{ position: "relative" }} className="hg">
                   <img src={Cur3} className="imh img-fluid" alt="pics" />
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "0",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                  >
-                    <div
-                      className="cen"
-                      style={{ width: "100%", height: "100%" }}
-                    >
-                      <div className="cen"></div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -153,20 +113,12 @@ function Home() {
             <div className="bgmehroon2">
               <div className="card bgmehroon" style={{ width: "100%" }}>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">
-                    Card subtitle
-                  </h6>
+                  <h5 className="card-title">BOOK A THEME</h5>
+
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Choose theme of "YOUR" choice for "YOUR" party
                   </p>
-                  <a href="#" className="card-link">
-                    Card link
-                  </a>
-                  <a href="#" className="card-link">
-                    Another link
-                  </a>
+                  <img src={P1} className="img-fluid" alt="" />
                 </div>
               </div>
             </div>
@@ -176,20 +128,12 @@ function Home() {
               <Link to="/beverages">
                 <div className="card bgblue" style={{ width: "100%" }}>
                   <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <h6 className="card-subtitle mb-2 text-muted">
-                      Card subtitle
-                    </h6>
+                    <h5 className="card-title">DRINKS</h5>
+
                     <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      A large variety of non-aloholic and alcoholic drinks
                     </p>
-                    <a href="" className="card-link">
-                      Card link
-                    </a>
-                    <a href="#" className="card-link">
-                      Another link
-                    </a>
+                    <img src={P1} className="img-fluid" alt="" />
                   </div>
                 </div>
               </Link>
@@ -199,20 +143,12 @@ function Home() {
             <div className="bgpurple2">
               <div className="card bgpurple" style={{ width: "100%" }}>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">
-                    Card subtitle
-                  </h6>
+                  <h5 className="card-title">FOOD</h5>
+
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    A large variety of non-aloholic and alcoholic drinks
                   </p>
-                  <a href="#" className="card-link">
-                    Card link
-                  </a>
-                  <a href="#" className="card-link">
-                    Another link
-                  </a>
+                  <img src={P1} className="img-fluid" alt="" />
                 </div>
               </div>
             </div>
@@ -221,20 +157,12 @@ function Home() {
             <div className="bggreen2">
               <div className="card bggreen" style={{ width: "100%" }}>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">
-                    Card subtitle
-                  </h6>
+                  <h5 className="card-title">DECORS</h5>
+
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    A large variety of non-aloholic and alcoholic drinks
                   </p>
-                  <a href="#" className="card-link">
-                    Card link
-                  </a>
-                  <a href="#" className="card-link">
-                    Another link
-                  </a>
+                  <img src={P1} className="img-fluid" alt="" />
                 </div>
               </div>
             </div>
@@ -246,23 +174,52 @@ function Home() {
         <div className="cen ">
           <h3 className="text-light mt-5">BEST SELLERS</h3>
         </div>
-        <Swiper navigation={true} className="mySwiper">
+        <Swiper
+          mousewheel={true}
+          pagination={{
+            clickable: true,
+          }}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={true}
+          className="mySwiper"
+        >
           <SwiperSlide>
-            <img className="img-fluid" src={pic1} alt="pics" />
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="img-fluid" src={pic2} alt="pics" />
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="img-fluid" src={pic3} alt="pics" />
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="img-fluid" src={pic4} alt="pics" />
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="img-fluid" src={pic1} alt="pics" />
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
           </SwiperSlide>
-          <div className="swiper-pagination"></div>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </SwiperSlide>
         </Swiper>
       </div>
 

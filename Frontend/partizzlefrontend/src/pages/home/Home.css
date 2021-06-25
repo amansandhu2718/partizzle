@@ -1,0 +1,9 @@
+li {
+  color: white;
+}
+h1 {
+  color: white;
+}
+video {
+  pointer-events: none;
+}
