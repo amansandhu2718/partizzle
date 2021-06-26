@@ -7,7 +7,7 @@ function Card(props) {
       <div className="cusmar pblack2 text-light">
         <div
           className="img-square-wrapper"
-          style={{ height: "100%", backgroundColor: "red" }}
+          style={{ height: "100%"}}
         >
           <img className="img-fluid my-auto mm" src={props.w} alt="Card  cap" />
         </div>

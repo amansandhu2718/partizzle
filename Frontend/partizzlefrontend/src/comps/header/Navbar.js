@@ -54,13 +54,13 @@ function Navbar() {
                 <i className="fas fa-lg fa-shopping-cart mx-2"></i>CART
               </Link>
               <Link
-                to="/profile"
+                to="/login"
                 className="mx-2 nav-link text-light"
                 data-toggle="tooltip"
                 data-placement="bottom"
                 title="Contact Us"
               >
-                <i className="fas fa-user fa-lg mx-2"></i>LOGIN
+                <i className="fas fa-user fa-lg mx-2"></i>Profile
               </Link>
             </div>
           </div>
