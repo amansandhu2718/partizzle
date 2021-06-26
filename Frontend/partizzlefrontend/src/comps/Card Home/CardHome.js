@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import P1 from "../../assets/images/P1.jpg";
 import { Link } from "react-router-dom";
+import "./CardHome.css"
 
 
 export default class CardHome extends Component {

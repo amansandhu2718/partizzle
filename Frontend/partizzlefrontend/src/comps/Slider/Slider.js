@@ -11,6 +11,7 @@ import pic2 from "../../assets/images/2.jpeg"
 import pic3 from "../../assets/images/3.jpeg";
 import pic4 from "../../assets/images/4.jpeg";
 import V1 from "../../assets/vids/wine.mp4";
+import "./Slider.css"
 
 import SwiperCore, {
   EffectCoverflow,

@@ -12,15 +12,15 @@ body {
   background-color: #151515;
 }
 
-.card-subtitle {
+/* .card-subtitle {
   color: rgba(218, 216, 216, 0.863) !important;
-}
-.swiper-pagination-bullet {
+} */
+/* .swiper-pagination-bullet {
   background-color: white;
 }
 .swiper-pagination-bullet-active {
   background-color: white;
-}
+} */
 .cen {
   display: grid;
   place-items: center;
@@ -30,16 +30,16 @@ body {
   text-align: center;
 }
 
-.whine {
+/* .whine {
   background-color: #8a0125;
   color: white;
-}
+} */
 
 .pblack {
   background-color: #040404;
 }
 
-.bgmehroon {
+/* .bgmehroon {
   background-color: #c32a43;
 }
 .bgmehroon:hover {
@@ -88,11 +88,11 @@ body {
   padding-bottom: 7vh;
   width: 100%;
   transition: padding 0.3s;
-}
+} */
 
-.imground {
+/* .imground {
   border-radius: 50%;
-}
+} */
 
 @media screen and (max-width: 768px) {
   /* .imh {
@@ -105,22 +105,22 @@ body {
 
 /* BEST SELLER */
 
-.swiper-container {
-  width: 100%;
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-}
+  /* .swiper-container {
+    width: 100%;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px !important;
-  height: 300px !important;
-}
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px !important;
+    height: 300px !important;
+  }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-}
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  } */
 
 /* END */
