@@ -6,6 +6,7 @@ import W3 from "../../assets/images/w3.jpeg";
 import ABC from "../../assets/images/drinkbg.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 function Beverages() {
   const notify = () => toast("Item Added to cart");
   return (
@@ -16,7 +17,6 @@ function Beverages() {
         <img src={ABC} alt="blaw" className="img-fluid" />
         <hr className="text-light mt-3  bg-light" />
       </div>
-
       <div className="products container">
         <Card w={W3} xyz={notify} />
         <Card w={W3} xyz={notify} />
