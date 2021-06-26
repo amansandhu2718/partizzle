@@ -4,8 +4,7 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <h2>CONTACT</h2>
-      
+      <h1>contact</h1>
     </>
   );
 }

@@ -6,7 +6,8 @@ import Profile from "./pages/Profile/Profile";
 import Err from "./pages/err404/Err404";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Beverages from "./pages/beverages/Beverages";
-import Login from './pages/Login/Login'
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/cart" component={Cart} exact />
           <Route path="/profile" component={Profile} exact />
           <Route path="/login" component={Login} exact />
+          <Route path="/signup" component={Signup} exact />
           <Route path="/beverages" component={Beverages} exact />
           <Route path="/" component={Err} />
         </Switch>
