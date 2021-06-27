@@ -1,50 +1,44 @@
-.full{
-    height: 100% !important;
-    width: 100%;
-    background-image: url("../../assets/images/loginbkg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.def {
+  position: "sticky";
+  top: "0px";
+  width: "100%";
+  z-index: 99;
+}
+.scroll-container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  color: aliceblue;
 }
 
-.pos{
-    position: fixed;
-    width: 100%;
+.scroll-area {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  color: aliceblue;
 }
-
-.swiper-container {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-.myyswiper{
-    height: 100%;
-    width: 100%;
+.one {
+  background-image: url("../../assets/images/birthday.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.two {
+  background-image: url("../../assets/images/haloween.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.three {
+  background-image: url("../../assets/images/cake.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.four {
+  background-color: black;
 }

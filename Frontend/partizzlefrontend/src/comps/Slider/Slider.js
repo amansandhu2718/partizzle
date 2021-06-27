@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
@@ -7,11 +7,11 @@ import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import Cur from "../../assets/images/cur..bg.png";
 import pic1 from "../../assets/images/1.jpeg";
-import pic2 from "../../assets/images/2.jpeg"
+import pic2 from "../../assets/images/2.jpeg";
 import pic3 from "../../assets/images/3.jpeg";
 import pic4 from "../../assets/images/4.jpeg";
 import V1 from "../../assets/vids/wine.mp4";
-import "./Slider.css"
+import "./Slider.css";
 
 import SwiperCore, {
   EffectCoverflow,
@@ -21,11 +21,10 @@ import SwiperCore, {
 
 SwiperCore.use([EffectCoverflow, Pagination, Mousewheel]);
 
-
 export default class Slider extends Component {
-    render() {
-        return (
-            <div className="container pblack  mt-5">
+  render() {
+    return (
+      <div className="container pblack  mt-5">
         <div className="cen ">
           <h3 className="text-light mt-5">BEST SELLERS</h3>
         </div>
@@ -46,7 +45,6 @@ export default class Slider extends Component {
             slideShadows: true,
           }}
           pagination={true}
-          className="mySwiper"
         >
           <SwiperSlide>
             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -77,7 +75,6 @@ export default class Slider extends Component {
           </SwiperSlide>
         </Swiper>
       </div>
-        
-        )
-    }
+    );
+  }
 }
