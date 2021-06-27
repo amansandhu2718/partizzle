@@ -26,18 +26,24 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: grid;
+  place-items: center;
 }
 .two {
   background-image: url("../../assets/images/haloween.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: grid;
+  place-items: center;
 }
 .three {
   background-image: url("../../assets/images/cake.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: grid;
+  place-items: center;
 }
 .four {
   background-color: black;
