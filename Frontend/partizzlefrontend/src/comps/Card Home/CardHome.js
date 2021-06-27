@@ -11,15 +11,17 @@ export default class CardHome extends Component {
         <div className="row mt-3">
           <div className="col-lg-3 pt-3">
             <div className="bgmehroon2">
+            
               <div className="card bgmehroon" style={{ width: "100%" }}>
+              <Link to="/theme">
                 <div className="card-body">
                   <h5 className="card-title">BOOK A THEME</h5>
-
                   <p className="card-text">
                     Choose theme of "YOUR" choice for "YOUR" party
                   </p>
                   <img src={P1} className="img-fluid" alt="" />
                 </div>
+                </Link>
               </div>
             </div>
           </div>
