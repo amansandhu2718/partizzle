@@ -9,6 +9,7 @@ import Beverages from "./pages/beverages/Beverages";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Theme from "./pages/Theme/Theme";
+import Food from "./pages/Food/Food";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/signup" component={Signup} exact />
           <Route path="/beverages" component={Beverages} exact />
           <Route path="/theme" component={Theme} exact />
+          <Route path="/food" component={Food} exact />
           <Route path="/" component={Err} />
         </Switch>
       </BrowserRouter>

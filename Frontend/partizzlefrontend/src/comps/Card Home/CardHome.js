@@ -43,6 +43,7 @@ export default class CardHome extends Component {
           </div>
           <div className="col-lg-3 pt-3">
             <div className="bgpurple2">
+            <Link to="/food">
               <div className="card bgpurple" style={{ width: "100%" }}>
                 <div className="card-body">
                   <h5 className="card-title">FOOD</h5>
@@ -53,6 +54,7 @@ export default class CardHome extends Component {
                   <img src={P1} className="img-fluid" alt="" />
                 </div>
               </div>
+              </Link>
             </div>
           </div>
           <div className="col-lg-3 pt-3">

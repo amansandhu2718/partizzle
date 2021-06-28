@@ -10,7 +10,9 @@ import pic1 from "../../assets/images/1.jpeg";
 import pic2 from "../../assets/images/2.jpeg";
 import pic3 from "../../assets/images/3.jpeg";
 import pic4 from "../../assets/images/4.jpeg";
-import V1 from "../../assets/vids/wine.mp4";
+import F1 from "../../assets/images/f1.jpg";
+import F2 from "../../assets/images/f2.jpg";
+import F3 from "../../assets/images/f3.jpg";
 import "./Slider.css";
 
 import SwiperCore, {
@@ -47,31 +49,31 @@ export default class Slider extends Component {
           pagination={true}
         >
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <img src={F1} className="img-fluid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <img src={F2} className="img-fluid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            <img src={F3} className="img-fluid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            <img src={pic1} className="img-fluid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            <img src={pic2} className="img-fluid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            <img src={pic3} className="img-fluid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            <img src={pic4} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            <img src={F2} className="img-fluid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            <img src={F3} className="img-fluid" />
           </SwiperSlide>
         </Swiper>
       </div>
