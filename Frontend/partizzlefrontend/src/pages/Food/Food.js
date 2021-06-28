@@ -5,6 +5,7 @@ import "./Food.css";
 import F1 from "../../assets/images/f1.jpg";
 import F2 from "../../assets/images/f2.jpg";
 import F3 from "../../assets/images/f3.jpg";
+import F4 from "../../assets/images/f4.jpg";
 import ABC from "../../assets/images/drinkbg.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,13 +23,13 @@ function Beverages() {
       <div className="products container">
         <Card w={F1} xy0z={notify} />
         <Card w={F2} xyz={notify} />
-        <Card w={F3} xyz={notify} />
+        <Card w={F4} xyz={notify} />
         <Card w={F1} xyz={notify} />
         <Card w={F2} xyz={notify} />0
-        <Card w={F3} xyz={notify} />
+        <Card w={F4} xyz={notify} />
         <Card w={F1} xyz={notify} />
         <Card w={F2} xyz={notify} />
-        <Card w={F3} xyz={notify} />
+        <Card w={F4} xyz={notify} />
       </div>
       <Footer />
     </>

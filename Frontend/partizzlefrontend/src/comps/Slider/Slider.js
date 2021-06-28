@@ -12,7 +12,7 @@ import pic3 from "../../assets/images/3.jpeg";
 import pic4 from "../../assets/images/4.jpeg";
 import F1 from "../../assets/images/f1.jpg";
 import F2 from "../../assets/images/f2.jpg";
-import F3 from "../../assets/images/f3.jpg";
+import F4 from "../../assets/images/f4.jpg";
 import "./Slider.css";
 
 import SwiperCore, {
@@ -49,31 +49,31 @@ export default class Slider extends Component {
           pagination={true}
         >
           <SwiperSlide>
-            <img src={F1} className="img-fluid" />
+            <img src={F1} className="img-fluid slid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={F2} className="img-fluid" />
+            <img src={F2} className="img-fluid slid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={F3} className="img-fluid" />
+            <img src={F4} className="img-fluid slid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pic1} className="img-fluid" />
+            <img src={pic1} className="img-fluid slid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pic2} className="img-fluid" />
+            <img src={pic2} className="img-fluid slid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pic3} className="img-fluid" />
+            <img src={pic3} className="img-fluid slid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pic4} />
+            <img src={pic4} className="img-fluid slid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={F2} className="img-fluid" />
+            <img src={F2} className="img-fluid slid" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={F3} className="img-fluid" />
+            <img src={F4} className="img-fluid slid" />
           </SwiperSlide>
         </Swiper>
       </div>

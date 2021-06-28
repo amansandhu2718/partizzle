@@ -17,12 +17,7 @@ function Home() {
       <CardHome />
       <Slider />
       <RecentEvents />
-      <Footer />
-      
-
-      
-
-      
+      <Footer />  
     </>
   );
 }

@@ -3,8 +3,9 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const requests = require("requests");
+const { json } = require("body-parser");
 app.use(bodyParser.json());
-
+app.use(bodyParser.json());
 app.use(cors());
 var allowedDomains = []; // ['https://google.com', 'https://facebook.com']
 var corsOptionsDelegate = function (req, callback) {
@@ -21,19 +22,20 @@ var corsOptionsDelegate = function (req, callback) {
 
   callback(null, corsOptions); // callback expects two parameters: error and options
 };
-
+var dd = [{ name: "aman" }, { name: "ritik" }];
+dd = JSON.stringify(dd);
 app.get("/", (req, res) => {
-  res.json({
-    hello: "ok world",
-    hello2: "okoko",
-  });
+  res.send(dd);
 });
 app.get("/contact", (req, res) => {
   console.log("hello");
   requests("https://cdn-api.co-vin.in/api/v2/admin/location/states")
     .on("data", function (chunk) {
       chunk = JSON.parse(chunk);
-      console.log(chunk.states);
+      // console.log(chunk.states);
+      chunk.states.map((e) => {
+        console.log(e.state_id);
+      });
       res.send(chunk);
     })
     .on("end", function (err) {
