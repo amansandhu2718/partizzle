@@ -34,6 +34,13 @@
 .cusmar {
   margin-top: 20px;
 }
+
+.card-err {
+  height: 12px;
+  color: red;
+}
+
+/* MediaQuery */
 @media only Screen and (max-width: 1400px) {
   .pblack2 {
     width: 22rem;

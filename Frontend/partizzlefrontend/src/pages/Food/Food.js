@@ -26,7 +26,7 @@ function Beverages() {
         <Card w={F2} xyz={notify} />
         <Card w={F4} xyz={notify} />
         <Card w={F1} xyz={notify} />
-        <Card w={F2} xyz={notify} />0
+        <Card w={F2} xyz={notify} />
         <Card w={F4} xyz={notify} />
         <Card w={F1} xyz={notify} />
         <Card w={F2} xyz={notify} />
