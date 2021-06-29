@@ -1,25 +1,23 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "../../comps/header/Navbar";
+import React, { useEffect, useState } from "react";
 
-function Contact() {
+const Contact = () => {
+  const [data, setData] = useState(null);
+  const fetchURL = "http://localhost:5000/";
+  const getData = () => fetch(`${fetchURL}`).then((res) => res.json());
+
   useEffect(() => {
-    fetch("http://localhost:5000/")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
-  });
+    getData().then((data) => setData(data));
+  }, []);
 
   return (
-    <>
-      <ul>
-        {/* {dd.map((e) => {
-          return <p> {e.name}</p>;
-        })} */}
-      </ul>
-      <Navbar />
-      <h1>contact</h1>
-    </>
+    <div>
+      {data?.map((item) => (
+        <ul>
+          <li>{item.title}</li>
+        </ul>
+      ))}
+    </div>
   );
-}
+};
+
 export default Contact;

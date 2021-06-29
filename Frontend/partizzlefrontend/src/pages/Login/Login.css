@@ -10,16 +10,16 @@
   justify-content: center;
   align-items: center;
 }
-.box {
+/* .box {
   width: 450px;
 
   background-color: rgba(0, 0, 0, 0.836);
   overflow: hidden;
   border-radius: 10px;
-}
+} */
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .box {
     width: 320px;
   }
-}
+} */

@@ -10,6 +10,7 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Theme from "./pages/Theme/Theme";
 import Food from "./pages/Food/Food";
+import Decors from "./pages/Decors/Decors";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/beverages" component={Beverages} exact />
           <Route path="/theme" component={Theme} exact />
           <Route path="/food" component={Food} exact />
+          <Route path="/decors" component={Decors} exact />
           <Route path="/" component={Err} />
         </Switch>
       </BrowserRouter>
