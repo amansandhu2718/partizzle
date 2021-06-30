@@ -28,7 +28,7 @@ function Cart(props) {
                         />
                         <a href="#!">
                           <div className="mask waves-effect waves-light">
-                            <img className="img-fluid w-100" src="" />
+                            <img className="img-fluid w-100" src="" alt="hai kuch" />
                             <div className="mask rgba-black-slight waves-effect waves-light"></div>
                           </div>
                         </a>
@@ -114,7 +114,7 @@ function Cart(props) {
                         />
                         <a href="#!">
                           <div className="mask waves-effect waves-light">
-                            <img className="img-fluid w-100" src="" />
+                            <img className="img-fluid w-100" src="" alt="hai kuch" />
                             <div className="mask rgba-black-slight waves-effect waves-light"></div>
                           </div>
                         </a>
