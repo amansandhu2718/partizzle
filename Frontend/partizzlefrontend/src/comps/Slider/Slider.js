@@ -5,7 +5,6 @@ import "swiper/components/navigation/navigation.min.css";
 import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
-import Cur from "../../assets/images/cur..bg.png";
 import pic1 from "../../assets/images/1.jpeg";
 import pic2 from "../../assets/images/2.jpeg";
 import pic3 from "../../assets/images/3.jpeg";
@@ -46,34 +45,34 @@ export default class Slider extends Component {
             modifier: 1,
             slideShadows: true,
           }}
-          pagination={true}
+          //pagination={true}
         >
           <SwiperSlide>
-            <img src={F1} className="img-fluid slid" />
+            <img src={F1} className="img-fluid slid" alt="hai kuch" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={F2} className="img-fluid slid" />
+            <img src={F2} className="img-fluid slid" alt="hai kuch" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={F4} className="img-fluid slid" />
+            <img src={F4} className="img-fluid slid" alt="hai kuch" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pic1} className="img-fluid slid" />
+            <img src={pic1} className="img-fluid slid" alt="hai kuch" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pic2} className="img-fluid slid" />
+            <img src={pic2} className="img-fluid slid" alt="hai kuch" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pic3} className="img-fluid slid" />
+            <img src={pic3} className="img-fluid slid" alt="hai kuch" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pic4} className="img-fluid slid" />
+            <img src={pic4} className="img-fluid slid" alt="hai kuch" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={F2} className="img-fluid slid" />
+            <img src={F2} className="img-fluid slid" alt="hai kuch" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={F4} className="img-fluid slid" />
+            <img src={F4} className="img-fluid slid" alt="hai kuch" />
           </SwiperSlide>
         </Swiper>
       </div>

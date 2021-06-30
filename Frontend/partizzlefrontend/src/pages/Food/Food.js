@@ -7,7 +7,7 @@ import F2 from "../../assets/images/f2.jpg";
 import F3 from "../../assets/images/f3.jpg";
 import F4 from "../../assets/images/f4.jpg";
 
-import ABC from "../../assets/images/drinkbg.png";
+//import ABC from "../../assets/images/drinkbg.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../../comps/Footer/Footer";

@@ -6,7 +6,7 @@ function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark pblack">
         <div className="container-fluid">
-          <a className="navbar-brand text-light" href="#">
+          <a className="navbar-brand text-light" href="/google.com">
             <h3>Partizzle</h3>
           </a>
           <button
