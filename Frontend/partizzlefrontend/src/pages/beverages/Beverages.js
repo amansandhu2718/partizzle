@@ -3,12 +3,12 @@ import faker from "faker";
 import Card from "../../comps/card/Card";
 import Navbar from "../../comps/header/Navbar";
 import "./beverages.css";
-import W3 from "../../assets/images/w3.jpeg";
+//import W3 from "../../assets/images/w3.jpeg";
 import ABC from "../../assets/images/drinkbg.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../../comps/Footer/Footer";
-import { lorem } from "faker/locale/az";
+//import { lorem } from "faker/locale/az";
 
 function Beverages(props) {
   const notify = (qty, id, title) => {
