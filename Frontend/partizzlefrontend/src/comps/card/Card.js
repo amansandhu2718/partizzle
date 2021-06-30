@@ -14,7 +14,7 @@ function Card(props) {
   };
   const handleLangChange = () => {
     var lang = value;
-    if (lang > 0 && lang <= 20) {
+    if (lang >= 0 && lang <= 20) {
       props.xyz(lang, props.itemId, props.itemTitle);
     } else {
       setAdd(false);

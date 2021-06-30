@@ -14,26 +14,41 @@ import Decors from "./pages/Decors/Decors";
 import React, { useState } from "react";
 
 function App() {
-  const [hello, sethello] = useState([]);
+  let arr = [
+    { prodId: 43, title: "two", qty: 0 },
+    { prodId: 123456, title: "Amandeep", qty: 0 },
 
-  const updateCart = (obj) => {
-    let oldData = hello;
-    let objectToUpdate = {
-      prodId: null,
-      title: null,
-      qty: null,
-    };
-    let arr = [];
-    oldData.map((item) => {
-      if (item.itemId === obj.prodId) {
-        let objectToUpdate = {
-          prodId: obj.prodId,
-          title: obj.title,
-          qty: obj.qty,
-        };
-        arr.push(objectToUpdate);
+    { prodId: 134, title: "three", qty: 3 },
+  ];
+  let [hello, sethello] = useState([]);
+
+  let updateCart = (obj) => {
+    console.log(obj.prodId);
+
+    arr.forEach((e) => {
+      if (e.prodId === obj.prodId) {
+        if (e.qty === obj.qty) {
+        } else {
+          if (obj.qty == 0) {
+            console.log("zero");
+
+            let pos = arr.indexOf(e);
+            console.log("**************");
+            console.log(arr);
+            console.log(pos);
+            arr.splice(pos, 1);
+
+            console.log(arr);
+            console.log("**************");
+          } else {
+            e.qty = obj.qty;
+            console.log("updated");
+            console.log(e.qty);
+          }
+        }
       } else {
-        arr.push(item);
+        arr.push(obj);
+        console.log("pushed");
       }
     });
   };
@@ -65,3 +80,7 @@ function App() {
 }
 
 export default App;
+// console.log(arr);
+// let pos = arr.indexOf(e);
+// arr.splice(pos, 1);
+// console.log(arr);

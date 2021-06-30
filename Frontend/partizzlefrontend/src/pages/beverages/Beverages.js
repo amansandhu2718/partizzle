@@ -12,16 +12,14 @@ import { lorem } from "faker/locale/az";
 
 function Beverages(props) {
   const notify = (qty, id, title) => {
-    console.log(id);
     toast(`${qty} ${title} Added To Cart`);
-    console.log(id);
     let obj = {
       prodId: id,
       title: title,
       qty: qty,
     };
     props.jk(obj);
-    console.log(obj);
+    // console.log(obj);
   };
   return (
     <>
@@ -34,7 +32,7 @@ function Beverages(props) {
       <div className="products container">
         <Card
           itemTitle="Amandeep"
-          itemId="123456"
+          itemId={123456}
           itemDesc={faker.lorem.sentence()}
           itemPrice={5656}
           itemPhoto={faker.image.avatar()}
