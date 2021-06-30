@@ -1,23 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { Component } from "react";
 
-const Contact = () => {
-  const [data, setData] = useState(null);
-  const fetchURL = "http://localhost:5000/";
-  const getData = () => fetch(`${fetchURL}`).then((res) => res.json());
+export default class Contact extends Component {
+  state = { data: [] };
+  componentDidMount() {
+    const fetchURL = "http://localhost:5000/";
 
-  useEffect(() => {
-    getData().then((data) => setData(data));
-  }, []);
-
-  return (
-    <div>
-      {data?.map((item) => (
-        <ul>
-          <li>{item.title}</li>
-        </ul>
-      ))}
-    </div>
-  );
-};
-
-export default Contact;
+    fetch(`${fetchURL}`)
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error("helloookfjikfjsojfs");
+        }
+      })
+      .then((data2) => {
+        console.log(data2);
+        this.setState({ data: data2 });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+  render() {
+    return (
+      <ul>
+        {this.state.data.map((e) => {
+          return <li> {e.name}</li>;
+        })}
+      </ul>
+    );
+  }
+}

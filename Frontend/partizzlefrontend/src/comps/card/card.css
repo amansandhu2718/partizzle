@@ -6,159 +6,46 @@
   color: white !important;
   opacity: 1 !important;
 }
-.pblack2 {
-  margin: auto;
-  display: flex;
 
-  width: 26rem;
-  margin: auto;
-  background-color: #04040498;
-  border: 3px solid #272626ce;
+.imgcover {
+  overflow: hidden !important;
+  display: grid;
+  place-items: center;
+
+  background-color: antiquewhite;
 }
-.mybtn {
-  background-color: #5768b1;
-  color: white;
+.imgcover2 {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden !important;
 }
-.cc {
-  width: 28ch;
-  max-height: 20ch;
+.cardtext {
+  height: 50px;
   overflow: hidden;
 }
-
-.cen {
-  display: grid !important;
-  place-items: center !important;
-  text-align: center;
+.itemcard {
+  background-color: black;
+  color: aliceblue;
+  height: 100%;
 }
-
-.cusmar {
-  margin-top: 20px;
-}
-
 .card-err {
   height: 12px;
   color: red;
 }
-
-/* MediaQuery */
-@media only Screen and (max-width: 1400px) {
-  .pblack2 {
-    width: 22rem;
-  }
-  .img-square-wrapper {
-    width: 80%;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .cc {
-    width: 15ch;
-    max-height: 11ch;
-    overflow: hidden;
-  }
-  .mm {
-    width: 100%;
-  }
+.rw-widget-input {
+  width: 100% !important;
+  background-color: rgb(0, 0, 0) !important;
+  color: antiquewhite !important;
 }
-@media only Screen and (max-width: 1200px) {
-  .pblack2 {
-    width: 18rem;
-  }
-  .img-square-wrapper {
-    width: 80%;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .cc {
-    width: 15ch;
-    max-height: 11ch;
-    overflow: hidden;
-  }
-  .mm {
-    width: 100%;
-  }
+.rw-widget-container {
+  width: 100% !important;
 }
-
-@media only Screen and (max-width: 992px) {
-  .pblack2 {
-    width: 20rem;
-  }
+.aabbcc {
+  border: 2px solid rgb(68, 68, 68);
 }
-@media only Screen and (max-width: 768px) {
-  .pblack2 {
-    width: 100%;
-  }
-  .cusmar {
-    margin-top: 10px;
-  }
-  .img-square-wrapper {
-    width: 80%;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .cc {
-    width: 100%;
-    max-height: 18ch;
-    overflow: hidden;
-    line-height: 20px;
-  }
-}
-@media only Screen and (max-width: 400px) {
-  .pblack2 {
-    width: 100%;
-  }
-  .img-square-wrapper {
-    width: 100%;
-    height: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .cc {
-    width: 18ch;
-    max-height: 13ch;
-    overflow: hidden;
-  }
-  .mm {
-    height: 38vh;
-  }
-}
-@media only Screen and (max-width: 400px) {
-  .pblack2 {
-    font-size: 12px;
-    width: 100%;
-  }
-  .img-square-wrapper {
-    width: 50vw;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .cc {
-    width: 45vw;
-    max-height: 13ch;
-    overflow: hidden;
-  }
-  .mm {
-    width: 80vw;
-  }
-}
-@media only Screen and (max-width: 300px) {
-  .pblack2 {
-    font-size: 16px;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .img-square-wrapper {
-    width: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .cc {
-    width: 100%;
-    max-height: 13ch;
-    overflow: hidden;
-  }
-  .mm {
-    width: 100%;
-    height: auto;
+@media only screen and (max-width: 1200px) {
+  .imgcover2 {
+    overflow: hidden !important;
   }
 }
