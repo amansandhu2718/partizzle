@@ -22,11 +22,13 @@ var corsOptionsDelegate = function (req, callback) {
 
   callback(null, corsOptions); // callback expects two parameters: error and options
 };
-var dd = [{ name: "aman" }, { name: "ritik" }];
-dd = JSON.stringify(dd);
+let dd = [{ name: "aman" }, { name: "ritik" }];
+
 app.get("/", (req, res) => {
-  res.send(dd);
+  // dd = JSON.parse(dd);
+  res.json(dd);
 });
+
 app.get("/contact", (req, res) => {
   console.log("hello");
   requests("https://cdn-api.co-vin.in/api/v2/admin/location/states")
