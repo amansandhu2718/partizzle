@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./card.css";
 import "react-widgets/styles.css";
 import NumberPicker from "react-widgets/NumberPicker";
+import Axios from 'axios'
 
 function Card(props) {
   const [add, setAdd] = useState(true);
@@ -16,6 +17,12 @@ function Card(props) {
     var lang = value;
     if (lang >= 0 && lang <= 20) {
       props.xyz(lang, props.itemId, props.itemTitle);
+      Axios.post("http://localhost:5000/addtocart",{
+        qty:lang,
+        id: props.itemId,
+        title: props.itemTitle,
+      });
+
     } else {
       setAdd(false);
     }

@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const bodyParser = require("body-parser");
+//const bodyParser = require("body-parser");
 const requests = require("requests");
-const { json } = require("body-parser");
-app.use(bodyParser.json());
-app.use(bodyParser.json());
+//const { json } = require("body-parser");
+app.use(express.json());
+//app.use(bodyParser.json());
+
 app.use(cors());
 var allowedDomains = []; // ['https://google.com', 'https://facebook.com']
 var corsOptionsDelegate = function (req, callback) {
@@ -46,5 +47,15 @@ app.get("/contact", (req, res) => {
       console.log("end");
     });
 });
+
+app.post("/addtocart",(req,res)=>{
+  id=req.body.id;
+  qty=req.body.qty;
+  title=req.body.title;
+  console.log(id);
+  console.log(qty)
+  console.log(title);
+
+})
 
 app.listen(5000);
