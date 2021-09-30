@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./pages/home/Home";
-import Contact from "./pages/contact/Contact";
+import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/Cart/Cart";
 import Profile from "./pages/Profile/Profile";
 import Err from "./pages/err404/Err404";
