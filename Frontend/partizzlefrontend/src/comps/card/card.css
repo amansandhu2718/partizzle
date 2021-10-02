@@ -1,0 +1,51 @@
+.Toastify__toast--default {
+  background-color: rgb(41, 41, 41) !important;
+  color: white !important;
+}
+.Toastify__close-button {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.imgcover {
+  overflow: hidden !important;
+  display: grid;
+  place-items: center;
+
+  background-color: antiquewhite;
+}
+.imgcover2 {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden !important;
+}
+.cardtext {
+  height: 50px;
+  overflow: hidden;
+}
+.itemcard {
+  background-color: black;
+  color: aliceblue;
+  height: 100%;
+}
+.card-err {
+  height: 12px;
+  color: red;
+}
+.rw-widget-input {
+  width: 100% !important;
+  background-color: rgb(0, 0, 0) !important;
+  color: antiquewhite !important;
+}
+.rw-widget-container {
+  width: 100% !important;
+}
+.aabbcc {
+  border: 2px solid rgb(68, 68, 68);
+}
+@media only screen and (max-width: 1200px) {
+  .imgcover2 {
+    overflow: hidden !important;
+  }
+}

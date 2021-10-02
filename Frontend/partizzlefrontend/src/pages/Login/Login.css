@@ -1,0 +1,25 @@
+.lgcontainer {
+  height: 100vh !important;
+  width: 100%;
+  background-image: url("../../assets/images/loginbkg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .box {
+  width: 450px;
+
+  background-color: rgba(0, 0, 0, 0.836);
+  overflow: hidden;
+  border-radius: 10px;
+} */
+
+/* @media only screen and (max-width: 768px) {
+  .box {
+    width: 320px;
+  }
+} */

@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151515;
+}
+
+.pblack {
+  background-color: #04040498;
+  border: 3px solid #272626ce;
+}
+
+.cen {
+  display: grid;
+  place-items: center;
+}
+
+.cen2 {
+  text-align: center;
+}
+
+/* .bvgimg {
+  height: 370px;
+  overflow: hidden;
+} */
+
+.horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.cc {
+  width: 18ch;
+  max-height: 11ch;
+  overflow: hidden;
+}
