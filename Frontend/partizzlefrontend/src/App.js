@@ -46,7 +46,7 @@ function App() {
             console.log(e.qty);
           }
         }
-      } else {
+      } else if (e.prodId != obj.prodId) {
         arr.push(obj);
         console.log("pushed");
       }
