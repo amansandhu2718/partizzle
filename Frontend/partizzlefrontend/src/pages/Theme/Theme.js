@@ -33,13 +33,11 @@ export default class Theme extends Component {
             <div className="col colhid "></div>
           </div>
         </div>
-        
-        
-        
+
         <div className="theme2 theme">
-        <div className="row themerow"></div>
+          <div className="row themerow"></div>
           <div className="row themerow">
-          <div className="col colhid "></div>
+            <div className="col colhid "></div>
             <div className="col themecol col-12 col-sm-12 col-md-6">
               <h1 className="themehead2">Reception Theme</h1>
               <p className="themepara2">
@@ -62,11 +60,8 @@ export default class Theme extends Component {
           </div>
         </div>
 
-
-
-
         <div className="theme3 theme">
-        <div className="row themerow"></div>
+          <div className="row themerow"></div>
           <div className="row themerow">
             <div className="col themecol col-12 col-sm-12 col-md-6">
               <h1 className="themehead3">Bachelor Theme</h1>
@@ -91,11 +86,10 @@ export default class Theme extends Component {
           </div>
         </div>
 
-
         <div className="theme4 theme">
-        <div className="row themerow"></div>
+          <div className="row themerow"></div>
           <div className="row themerow">
-          <div className="col colhid "></div>
+            <div className="col colhid "></div>
             <div className="col themecol col-12 col-sm-12 col-md-6">
               <h1 className="themehead4">Reception Theme</h1>
               <p className="themepara4">
@@ -117,8 +111,6 @@ export default class Theme extends Component {
             </div>
           </div>
         </div>
-
-
 
         <Footer />
       </>

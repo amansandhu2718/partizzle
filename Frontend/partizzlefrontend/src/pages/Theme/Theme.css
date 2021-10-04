@@ -22,7 +22,6 @@
   background-image: url("../../assets/images/reception.jpg");
 }
 
-
 .theme3 {
   background-image: url("../../assets/images/bachelor.jpg");
 }
@@ -30,7 +29,6 @@
 .theme4 {
   background-image: url("../../assets/images/christmas.jpg");
 }
-
 
 .themerow {
   height: 50%;
@@ -72,7 +70,7 @@
 }
 
 .themebtn2 {
-  background-color: #CC9C41;
+  background-color: #cc9c41;
   border: none;
   color: black;
 }
@@ -89,11 +87,10 @@
 }
 
 .themebtn3 {
-  background-color: #483A1E;
+  background-color: #483a1e;
   border: none;
   color: white;
 }
-
 
 .themehead4 {
   font-family: "Abril Fatface", cursive;
@@ -112,7 +109,6 @@
   color: white;
 }
 
-
 .btnrow {
   width: 100%;
   display: flex;
@@ -120,7 +116,6 @@
   align-items: center;
   flex-direction: column;
 }
-
 
 .mycheckbox input:checked ~ .control_indicator {
   background: #00ff0b;
@@ -164,5 +159,4 @@
     width: 70%;
     font-size: 3vw;
   }
-
 }
