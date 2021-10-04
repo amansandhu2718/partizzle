@@ -19,23 +19,30 @@
 }
 
 .theme2 {
-  background-image: url("../../assets/images/22.jpg");
+  background-image: url("../../assets/images/reception.jpg");
 }
+
+
 .theme3 {
-  background-image: url("../../assets/images/11.jpg");
+  background-image: url("../../assets/images/bachelor.jpg");
 }
+
 .theme4 {
-  background-image: url("../../assets/images/22.jpg");
+  background-image: url("../../assets/images/christmas.jpg");
 }
+
+
 .themerow {
   height: 50%;
   width: 100%;
 }
+
 .themecol {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .themehead1 {
   font-family: "Abril Fatface", cursive;
   color: #cce0fb;
@@ -46,6 +53,66 @@
   width: 70%;
   font-size: 1.2vw;
 }
+
+.themebtn1 {
+  background-color: #cce0fb;
+  border: none;
+  color: black;
+}
+
+.themehead2 {
+  font-family: "Abril Fatface", cursive;
+  color: #cce0fb;
+  font-size: 4vw;
+}
+.themepara2 {
+  color: #cce0fb;
+  width: 70%;
+  font-size: 1.2vw;
+}
+
+.themebtn2 {
+  background-color: #CC9C41;
+  border: none;
+  color: black;
+}
+
+.themehead3 {
+  font-family: "Abril Fatface", cursive;
+  color: white;
+  font-size: 4vw;
+}
+.themepara3 {
+  color: white;
+  width: 70%;
+  font-size: 1.2vw;
+}
+
+.themebtn3 {
+  background-color: #483A1E;
+  border: none;
+  color: white;
+}
+
+
+.themehead4 {
+  font-family: "Abril Fatface", cursive;
+  color: #cce0fb;
+  font-size: 4vw;
+}
+.themepara4 {
+  color: white;
+  width: 70%;
+  font-size: 1.2vw;
+}
+
+.themebtn4 {
+  background-color: #953e57;
+  border: none;
+  color: white;
+}
+
+
 .btnrow {
   width: 100%;
   display: flex;
@@ -53,11 +120,8 @@
   align-items: center;
   flex-direction: column;
 }
-.themebtn1 {
-  background-color: #cce0fb;
-  border: none;
-  color: black;
-}
+
+
 .mycheckbox input:checked ~ .control_indicator {
   background: #00ff0b;
 }
@@ -67,12 +131,38 @@
   }
   .themehead1 {
     font-family: "Abril Fatface", cursive;
-    color: #cce0fb;
     font-size: 8vw;
   }
   .themepara1 {
-    color: #cce0fb;
     width: 70%;
     font-size: 3vw;
   }
+
+  .themehead2 {
+    font-family: "Abril Fatface", cursive;
+    font-size: 8vw;
+  }
+  .themepara2 {
+    width: 70%;
+    font-size: 3vw;
+  }
+
+  .themehead3 {
+    font-family: "Abril Fatface", cursive;
+    font-size: 8vw;
+  }
+  .themepara3 {
+    width: 70%;
+    font-size: 3vw;
+  }
+
+  .themehead4 {
+    font-family: "Abril Fatface", cursive;
+    font-size: 8vw;
+  }
+  .themepara4 {
+    width: 70%;
+    font-size: 3vw;
+  }
+
 }
