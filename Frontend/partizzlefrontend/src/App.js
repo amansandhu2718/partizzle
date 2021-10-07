@@ -63,7 +63,7 @@ function App() {
           <Route path="/cart" render={() => <Cart kl={hello} />} exact />
           <Route path="/profile" component={Profile} exact />
           <Route path="/login" component={Login} exact />
-          <Route path="/signup" component={Signup} exact />
+          <Route path="/sign-up" component={Signup} exact />
           <Route
             path="/beverages"
             render={() => <Beverages jk={updateCart} />}

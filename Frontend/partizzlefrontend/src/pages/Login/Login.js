@@ -3,6 +3,7 @@ import "./Login.css";
 import Navbar from "../../comps/header/Navbar";
 import Mainbg from "../../assets/images/party.svg";
 import Footer from "../../comps/Footer/Footer";
+import { Link } from "react-router-dom";
 
 export default class Login extends Component {
   render() {
@@ -30,12 +31,19 @@ export default class Login extends Component {
                       />
                       <input
                         type="button"
-                        value="Login"
+                        value="Sign In"
                         className="btn btn-lg btn-primary mt-4"
                       />
-                      <a href="" className="mt-2">
+                      
+                      <Link
+                to="/sign-up"
+                className="mt-2"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Contact Us"
+              >
                         Not a user, Sign up here
-                      </a>
+                      </Link>
                     </form>
                   </div>
                 </div>

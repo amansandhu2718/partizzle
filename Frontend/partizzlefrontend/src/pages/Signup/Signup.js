@@ -1,66 +1,77 @@
 import React, { Component } from "react";
-import "./Signup.css";
+import "../../pages/Login/Login.css";
+import Navbar from "../../comps/header/Navbar";
+import Footer from "../../comps/Footer/Footer";
+import { Link } from "react-router-dom";
 
 export default class Signup extends Component {
   render() {
     return (
       <>
-        <div className="lgcontainer ">
-          <div className="box text-center">
-            <form className="p-4">
-              <h1 style={{ opacity: "0.3" }}>Partizzle</h1>
-              <h1 className="h3 mb-3 ">Signup </h1>
-              <div className="form-floating ">
-                <input
-                  type="text"
-                  className="form-control  "
-                  id="floatingInput"
-                  placeholder="name@example.com"
-                />
-                <label for="floatingInput">Full Name</label>
+        <Navbar />
+        <div className="loginbgg">
+          <section>
+            <div className="container mainsection">
+              <div className="row w-100">
+                <div className="col col-12  col-md-6 col-lg-5 ">
+                  <div className="writings my-auto">
+                    <h1 className="mainheading">Sign Up</h1>
+
+                    <form action="" method="post" className="loginform">
+                      <input
+                        type="text"
+                        className="form-control mt-5"
+                        placeholder="Name"
+                      />
+                      <input
+                        type="Email"
+                        className="form-control mt-3"
+                        placeholder="Email"
+                      />
+                      <input
+                        type="text"
+                        className="form-control mt-3"
+                        placeholder="Address"
+                      />
+                      <input
+                        type="number"
+                        className="form-control mt-3"
+                        placeholder="Mobile"
+                      />
+                      <input
+                        type="Password"
+                        className="form-control mt-3"
+                        placeholder="Password"
+                      />
+                      <input
+                        type="Password"
+                        className="form-control mt-3"
+                        placeholder="Confirm Password"
+                      />
+                      <input
+                        type="button"
+                        value="Sign Up"
+                        className="btn btn-lg btn-primary mt-4"
+                      />
+
+                      <Link
+                        to="/login"
+                        className="mt-2"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Contact Us"
+                      >
+                        Already a user? Sign In here
+                      </Link>
+                    </form>
+                  </div>
+                </div>
+                <div className="col col-12 col-lg-6 "></div>
               </div>
-              <div className="form-floating">
-                <input
-                  type="email"
-                  className="form-control mt-3 "
-                  placeholder="name@example.com"
-                />
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div className="form-floating">
-                <input
-                  type="number"
-                  className="form-control mt-3 "
-                  placeholder="name@example.com"
-                />
-                <label for="floatingInput">Mobile </label>
-              </div>
-              <div className="form-floating">
-                <input
-                  type="text"
-                  className="form-control mt-3"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Password</label>
-              </div>
-              <div className="form-floating">
-                <input
-                  type=" Confirm password"
-                  className="form-control mt-3"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Confirm Password</label>
-              </div>
-              <button
-                className="w-100 btn btn-lg btn-primary mt-3"
-                type="submit"
-              >
-                Sign in
-              </button>
-              <p className="mt-2 mb-3 text-light">&copy; 2021</p>
-            </form>
-          </div>
+            </div>
+          </section>
         </div>
+        <Footer />
       </>
     );
   }
