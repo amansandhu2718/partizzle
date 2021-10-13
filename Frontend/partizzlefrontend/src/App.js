@@ -20,7 +20,6 @@ function App() {
 
     { prodId: 134, title: "three", qty: 3 },
   ];
-  let [hello, sethello] = useState([]);
 
   let updateCart = (obj) => {
     console.log(obj.prodId);
@@ -56,11 +55,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {console.log(hello)}
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/contact" component={Contact} exact />
-          <Route path="/cart" render={() => <Cart kl={hello} />} exact />
+          <Route path="/cart" render={() => <Cart />} exact />
           <Route path="/profile" component={Profile} exact />
           <Route path="/login" component={Login} exact />
           <Route path="/sign-up" component={Signup} exact />

@@ -1,11 +1,6 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const bodyParser = require("body-parser");
-const requests = require("requests");
-const { json } = require("body-parser");
-app.use(bodyParser.json());
-app.use(bodyParser.json());
 app.use(cors());
 var allowedDomains = []; // ['https://google.com', 'https://facebook.com']
 var corsOptionsDelegate = function (req, callback) {
@@ -22,29 +17,10 @@ var corsOptionsDelegate = function (req, callback) {
 
   callback(null, corsOptions); // callback expects two parameters: error and options
 };
-let dd = [{ name: "aman" }, { name: "ritik" }];
-
-app.get("/", (req, res) => {
-  // dd = JSON.parse(dd);
-  res.json(dd);
+app.get("http://localhost:3000/", (req, res) => {
+  console.log("Connected to React");
 });
 
-app.get("/contact", (req, res) => {
-  console.log("hello");
-  requests("https://cdn-api.co-vin.in/api/v2/admin/location/states")
-    .on("data", function (chunk) {
-      chunk = JSON.parse(chunk);
-      // console.log(chunk.states);
-      chunk.states.map((e) => {
-        console.log(e.state_id);
-      });
-      res.send(chunk);
-    })
-    .on("end", function (err) {
-      if (err) return console.log("connection closed due to errors", err);
+const PORT = process.env.PORT || 5000;
 
-      console.log("end");
-    });
-});
-
-app.listen(5000);
+app.listen(PORT, console.log(`Server started on port ${PORT}`));

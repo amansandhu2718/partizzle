@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 function Navbar() {
   return (
     <>
@@ -25,43 +26,94 @@ function Navbar() {
             id="navbarNavAltMarkup"
           >
             <div className="navbar-nav">
-              <Link
-                to="/"
+              <motion.div
                 className="mx-2 nav-link text-light"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Contact Us"
+                transition={{ duration: 0.1, delay: 0 }}
+                whileTap={{
+                  scale: 1.2,
+                  backgroundColor: "#ff0000",
+                }}
+                whileHover={{
+                  opacity: 1,
+                  boxShadow: "0px 0px 50px #ff0000",
+                  borderRadius: "30px",
+                }}
               >
-                <i className="fas fa-home fa-lg mx-2"></i>HOME
-              </Link>
-
-              <Link
-                to="/contact"
+                <Link
+                  to="/"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >
+                  <i className="fas fa-home fa-lg mx-2"></i>HOME
+                </Link>
+              </motion.div>
+              <motion.div
                 className="mx-2 nav-link text-light"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Contact Us"
+                transition={{ duration: 0.1, delay: 0 }}
+                whileTap={{
+                  scale: 1.2,
+                  backgroundColor: "#ff0000",
+                }}
+                whileHover={{
+                  opacity: 1,
+                  boxShadow: "0px 0px 50px #ff0000",
+                  borderRadius: "30px",
+                }}
               >
-                <i className="fas fa-lg fa-id-card-alt mx-2"></i>CONTACT
-              </Link>
-              <Link
-                to="/cart"
+                <Link
+                  to="/contact"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >
+                  <i className="fas fa-lg fa-id-card-alt mx-2"></i>CONTACT
+                </Link>
+              </motion.div>
+              <motion.div
                 className="mx-2 nav-link text-light"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Contact Us"
+                transition={{ duration: 0.1, delay: 0 }}
+                whileTap={{
+                  scale: 1.2,
+                  backgroundColor: "#ff0000",
+                }}
+                whileHover={{
+                  opacity: 1,
+                  boxShadow: "0px 0px 50px #ff0000",
+                  borderRadius: "30px",
+                }}
               >
-                <i className="fas fa-lg fa-shopping-cart mx-2"></i>CART
-              </Link>
-              <Link
-                to="/login"
+                <Link
+                  to="/cart"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >
+                  <i className="fas fa-lg fa-shopping-cart mx-2"></i>CART
+                </Link>
+              </motion.div>
+              <motion.div
                 className="mx-2 nav-link text-light"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Contact Us"
+                transition={{ duration: 0.1, delay: 0 }}
+                whileTap={{
+                  scale: 1.2,
+                  backgroundColor: "#ff0000",
+                }}
+                whileHover={{
+                  opacity: 1,
+                  boxShadow: "0px 0px 50px #ff0000",
+                  borderRadius: "30px",
+                }}
               >
-                <i className="fas fa-user fa-lg mx-2"></i>Profile
-              </Link>
+                <Link
+                  to="/login"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >
+                  <i className="fas fa-user fa-lg mx-2"></i>Profile
+                </Link>
+              </motion.div>
             </div>
           </div>
         </div>

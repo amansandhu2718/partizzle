@@ -34,14 +34,14 @@ export default class Login extends Component {
                         value="Sign In"
                         className="btn btn-lg btn-primary mt-4"
                       />
-                      
+
                       <Link
-                to="/sign-up"
-                className="mt-2"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Contact Us"
-              >
+                        to="/sign-up"
+                        className="mt-2"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Contact Us"
+                      >
                         Not a user, Sign up here
                       </Link>
                     </form>
