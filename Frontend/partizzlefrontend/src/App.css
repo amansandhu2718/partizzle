@@ -8,7 +8,10 @@ a {
   color: white !important;
 }
 body {
-  background: linear-gradient(345deg, rgba(10,28,52,1) 0%, rgba(38,29,38,1) 100%);
+  background-color: #111927;
+  background-image: 
+      radial-gradient(at 47% 33%, hsl(218.18, 39%, 11%) 0, transparent 59%), 
+      radial-gradient(at 82% 65%, hsl(218.18, 39%, 11%) 0, transparent 55%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark pblack">
+      <nav className="navbar navbar-expand-lg navbar-dark ok">
         <div className="container-fluid">
           <a className="navbar-brand text-light" href="/google.com">
             <h3>Partizzle</h3>
