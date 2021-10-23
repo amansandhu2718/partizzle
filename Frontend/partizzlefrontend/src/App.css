@@ -8,7 +8,13 @@ a {
   color: white !important;
 }
 body {
-  background-color: #151515;
+  background: linear-gradient(345deg, rgba(10,28,52,1) 0%, rgba(38,29,38,1) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  
 }
 
 /* .card-subtitle {

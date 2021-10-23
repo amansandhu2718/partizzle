@@ -1,0 +1,42 @@
+.caritemcard {
+  position: relative !important;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgb(29, 29, 29);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: black;
+}
+.cartitemcardimage {
+  height: 200px !important;
+}
+.quantity-picker {
+  background-color: rgb(0, 0, 0) !important;
+  color: white !important;
+  border: none;
+  height: auto !important;
+}
+.quantity-display {
+  background-color: rgb(26, 25, 25);
+  color: white;
+  height: 2rem !important;
+}
+.quantity-modifier {
+  background-color: rgb(59, 59, 59);
+  color: white !important;
+
+  border: none !important;
+}
+.quantity-modifier:hover {
+  background-color: rgb(141, 141, 141);
+  color: rgb(0, 0, 0) !important;
+
+  border: none !important;
+}
+
+/* APPLY MEDIA QUERY FOR IMAGE (PENDING)*/
+/* .cartitemcardimage {
+    height: 200px !important;
+  } */

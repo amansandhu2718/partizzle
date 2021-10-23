@@ -6,7 +6,7 @@ import V2 from "../../assets/vids/My Video.mp4";
 export default class Carousel extends Component {
   render() {
     return (
-      <div>
+      <div >
         <div className="container mt-2">
           <div
             id="carouselExampleFade"

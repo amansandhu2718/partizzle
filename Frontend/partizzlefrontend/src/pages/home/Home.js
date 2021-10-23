@@ -11,12 +11,14 @@ import Footer from "../../comps/Footer/Footer";
 function Home() {
   return (
     <>
-      <Navbar />
+     <div >
+     <Navbar />
       <Carousel />
       <CardHome />
       <Slider />
       <RecentEvents />
       <Footer />
+     </div>
     </>
   );
 }

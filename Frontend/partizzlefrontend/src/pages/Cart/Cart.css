@@ -1,4 +1,23 @@
-.bilak{
+.bilak {
   background-color: black;
 }
-
+.shade {
+  background-color: rgb(39, 39, 39);
+}
+.leftright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.trans {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 20px;
+  min-height: 80vh;
+}
+.hhh {
+  height: min-content;
+}
+.cartcolorbg {
+  padding: 20px !important;
+}
