@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import Cur1 from "../../assets/images/cur..bg1.png";
 import Cur3 from "../../assets/images/cur.3.png";
 import V2 from "../../assets/vids/My Video.mp4";
+import './carousel.css'
 
 export default class Carousel extends Component {
   render() {
     return (
-      <div >
-        <div className="container mt-2">
+      <div className="marginc ">
+        <div className="container mt-2 ">
           <div
             id="carouselExampleFade"
             className="carousel slide carousel-fade"

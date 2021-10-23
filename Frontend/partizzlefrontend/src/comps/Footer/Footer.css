@@ -1,3 +1,9 @@
 .cuswhite{
     color: rgba(253, 249, 249, 0.472);
 }
+.bgfooter{backdrop-filter: blur(25px) saturate(152%);
+    -webkit-backdrop-filter: blur(25px) saturate(152%);
+    background-color: rgba(83, 83, 104, 0.43);
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+width: 100vw; }

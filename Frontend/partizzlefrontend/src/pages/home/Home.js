@@ -10,9 +10,9 @@ import Footer from "../../comps/Footer/Footer";
 
 function Home() {
   return (
-    <>
-     <div >
-     <Navbar />
+    <><Navbar />
+     <div style={{display:"flex",alignItems:"center",flexDirection:"column"}}>
+     
       <Carousel />
       <CardHome />
       <Slider />

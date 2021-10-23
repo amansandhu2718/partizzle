@@ -1,5 +1,21 @@
 .ok{ backdrop-filter: blur(25px) saturate(152%);
     -webkit-backdrop-filter: blur(25px) saturate(152%);
     background-color: rgba(83, 83, 104, 0.43);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);}
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+position: sticky;
+z-index: 99999;
+;
+top: 0px;
+width: 100vw;
+
+box-shadow: 0px 0px 20px rgb(31, 31, 31);
+}
+.ddd{
+margin-left: 20px;
+margin-right: 20px;
+}
+/* @media screen and (max-width: 768px) {
+.ok{position: static;
+z-index: 99999;
+box-shadow: 0px 0px 20px rgb(31, 31, 31);}} */

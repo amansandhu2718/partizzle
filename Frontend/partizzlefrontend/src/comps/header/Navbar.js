@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark ok">
-        <div className="container-fluid">
+        <div className="container-fluid ddd">
           <a className="navbar-brand text-light" href="/google.com">
             <h3>Partizzle</h3>
           </a>
@@ -31,11 +31,11 @@ function Navbar() {
                 transition={{ duration: 0.1, delay: 0 }}
                 whileTap={{
                   scale: 1.2,
-                  backgroundColor: "#ff0000",
+                  backgroundColor: "#fff",
                 }}
                 whileHover={{
                   opacity: 1,
-                  boxShadow: "0px 0px 50px #ff0000",
+                  boxShadow: "0px 0px 50px #fff",
                   borderRadius: "30px",
                 }}
               >
@@ -53,11 +53,11 @@ function Navbar() {
                 transition={{ duration: 0.1, delay: 0 }}
                 whileTap={{
                   scale: 1.2,
-                  backgroundColor: "#ff0000",
+                  backgroundColor: "#fff",
                 }}
                 whileHover={{
                   opacity: 1,
-                  boxShadow: "0px 0px 50px #ff0000",
+                  boxShadow: "0px 0px 50px #fff",
                   borderRadius: "30px",
                 }}
               >
@@ -75,11 +75,11 @@ function Navbar() {
                 transition={{ duration: 0.1, delay: 0 }}
                 whileTap={{
                   scale: 1.2,
-                  backgroundColor: "#ff0000",
+                  backgroundColor: "#fff",
                 }}
                 whileHover={{
                   opacity: 1,
-                  boxShadow: "0px 0px 50px #ff0000",
+                  boxShadow: "0px 0px 50px #fff",
                   borderRadius: "30px",
                 }}
               >
@@ -97,11 +97,11 @@ function Navbar() {
                 transition={{ duration: 0.1, delay: 0 }}
                 whileTap={{
                   scale: 1.2,
-                  backgroundColor: "#ff0000",
+                  backgroundColor: "#fff",
                 }}
                 whileHover={{
                   opacity: 1,
-                  boxShadow: "0px 0px 50px #ff0000",
+                  boxShadow: "0px 0px 50px #fff",
                   borderRadius: "30px",
                 }}
               >

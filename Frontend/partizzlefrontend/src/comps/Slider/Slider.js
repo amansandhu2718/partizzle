@@ -25,7 +25,7 @@ SwiperCore.use([EffectCoverflow, Pagination, Mousewheel]);
 export default class Slider extends Component {
   render() {
     return (
-      <div className="container pblack  mt-5">
+      <div className="container pblack   mt-5">
         <div className="cen ">
           <h3 className="text-light mt-5">BEST SELLERS</h3>
         </div>
