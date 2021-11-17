@@ -1,13 +1,36 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../../pages/Login/Login.css";
 import Navbar from "../../comps/header/Navbar";
 import Footer from "../../comps/Footer/Footer";
 import { Link } from "react-router-dom";
+import axios from "axios"
 
-export default class Signup extends Component {
-  render() {
-    return (
-      <>
+
+export default function Signup() {
+
+
+
+  
+  const [name, setName] = useState("")
+  const [email , setEmail] = useState("");
+  const [password , setPassword] = useState("");
+  const [conpassword, setConpassword] = useState("")
+  const [address, setAddress] = useState("")
+  const [mobile, setMobile] = useState("")
+
+  
+
+  const signup = () =>{
+    const data = {name,email,password,conpassword,address,mobile}
+    console.log("aya");
+    axios.post("http://localhost:5000/signup",data)
+    console.log("gya");
+  };
+
+
+
+  return (
+    <>
         <Navbar />
         <div className="loginbgg">
           <section>
@@ -22,36 +45,55 @@ export default class Signup extends Component {
                         type="text"
                         className="form-control mt-5"
                         placeholder="Name"
+                        onChange={(event)=>{
+                          setName(event.target.value);
+                        }}
                       />
                       <input
                         type="Email"
                         className="form-control mt-3"
                         placeholder="Email"
+                        onChange={(event)=>{
+                          setEmail(event.target.value);
+                        }}
                       />
                       <input
                         type="text"
                         className="form-control mt-3"
                         placeholder="Address"
+                        onChange={(event)=>{
+                          setAddress(event.target.value);
+                        }}
                       />
                       <input
                         type="number"
                         className="form-control mt-3"
                         placeholder="Mobile"
+                        onChange={(event)=>{
+                          setMobile(event.target.value);
+                        }}
                       />
                       <input
                         type="Password"
                         className="form-control mt-3"
                         placeholder="Password"
+                        onChange={(event)=>{
+                          setPassword(event.target.value);
+                        }}
                       />
                       <input
                         type="Password"
                         className="form-control mt-3"
                         placeholder="Confirm Password"
+                        onChange={(event)=>{
+                          setConpassword(event.target.value);
+                        }}
                       />
                       <input
                         type="button"
                         value="Sign Up"
                         className="btn btn-lg btn-primary mt-4"
+                        onClick={signup}
                       />
 
                       <Link
@@ -73,6 +115,24 @@ export default class Signup extends Component {
         </div>
         <Footer />
       </>
-    );
-  }
+  )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// export default class Signup extends Component {
+//   render() {
+//     return (
+      
+//     );
+//   }
+// }
