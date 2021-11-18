@@ -1,9 +1,24 @@
 const express = require("express");
+const path = require("path");
+const multer = require("multer");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const User=require('./Models/User');
+const Product=require('./Models/Product');
 const validator = require("validator");
+
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./Public/Upload/");
+  },
+  filename: function (req, file, cb) {
+    cb(null,Date.now() + '_' + file.originalname);
+  },
+});
+
+var upload = multer({ storage: storage });
 
 
 
@@ -74,8 +89,8 @@ app.post("/signup", (req, res) => {
           address: userLocation,
         });
         u1.save();
-        res.redirect("/login");
         console.log("USER REGISTRATION SUCCESFULL");
+        res.send({status:200})
       }
     });
   };
@@ -143,7 +158,7 @@ app.post("/signup", (req, res) => {
 
 app.post("/signin", (req, res) => {
   let data= req.body
-  
+  let a = 0;
   const Email = data.email;
   const Password = data.password;
   console.log(`${Email} tried logging in.`);
@@ -155,14 +170,38 @@ app.post("/signin", (req, res) => {
     User.findOne({ email: Email, password: Password }).then((user) => {
       if (user) {
         console.log(`${user.email} Logged In Successfully`);
+        res.send({status:200})
       }
       else{
         console.log("PASSWORD OR EMAIL DOESN'T MATCH");
+        res.send();
       }
     })
   }
-  
+});
 
+app.post("/add-data", (req, res) => {
+  var data = req.body;
+  console.log(data.category);
+  const p1 = new Product({
+    name: data.name,
+    description: data.description ,
+    price:data.price,
+    category:data.category
+  });
+  p1.save();
+  console.log("Done");
+  res.send({message:"ADDED DATA"})
+});
+
+
+app.get("/beverages", (req, res) => {
+  Product.find({category:"drinks"}).then((abc) => {
+    var temp=JSON.stringify(abc);
+    temp = JSON.parse(temp)
+    console.log(temp);
+    res.send(temp)
+  })
 });
 
 

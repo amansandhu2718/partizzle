@@ -1,0 +1,31 @@
+{"products":[{
+    "id":"01",
+    "name":"Coke",
+    "price":"50",
+    "description":"Soft Drink very tasty and affordable drink",
+    "image":"imgdata"},
+    {
+        "id":"02",
+        "name":"Coke",
+        "price":"50",
+        "description":"Soft Drink very tasty and affordable drink",
+        "image":"imgdata"
+    },
+    {
+        "id":"03",
+        "name":"Coke",
+        "price":"50",
+        "description":"Soft Drink very tasty and affordable drink",
+        "image":"imgdata"
+    },
+    {
+        "id":"04",
+        "name":"Coke",
+        "price":"50",
+        "description":"Soft Drink very tasty and affordable drink",
+        "image":"imgdata"
+    }
+    
+
+    
+    ]}

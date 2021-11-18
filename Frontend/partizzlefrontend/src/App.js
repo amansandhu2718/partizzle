@@ -12,6 +12,7 @@ import Theme from "./pages/Theme/Theme";
 import Food from "./pages/Food/Food";
 import Decors from "./pages/Decors/Decors";
 import React, { useState } from "react";
+import Admin from "./pages/Admin/Admin";
 
 function App() {
   let arr = [
@@ -70,6 +71,7 @@ function App() {
           <Route path="/theme" component={Theme} exact />
           <Route path="/food" component={Food} exact />
           <Route path="/decors" component={Decors} exact />
+          <Route path="/admin" component={Admin} exact/>
           <Route path="/" component={Err} />
         </Switch>
       </BrowserRouter>

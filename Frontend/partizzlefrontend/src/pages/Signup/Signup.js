@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "../../pages/Login/Login.css";
 import Navbar from "../../comps/header/Navbar";
 import Footer from "../../comps/Footer/Footer";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios"
 
 
 export default function Signup() {
 
 
-
+  const history = useHistory();
   
   const [name, setName] = useState("")
   const [email , setEmail] = useState("");
@@ -22,9 +22,13 @@ export default function Signup() {
 
   const signup = () =>{
     const data = {name,email,password,conpassword,address,mobile}
-    console.log("aya");
-    axios.post("http://localhost:5000/signup",data)
-    console.log("gya");
+    axios.post("http://localhost:5000/signup",data).then((res)=>{
+      if (res.data.status==200) {
+        history.push("/login")
+      }else{
+        history.push("/sign-up")
+      }
+    })
   };
 
 

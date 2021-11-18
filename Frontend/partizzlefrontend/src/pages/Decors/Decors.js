@@ -11,6 +11,11 @@ import Decorbg from "../../assets/images/decorbg.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../../comps/Footer/Footer";
+import decor_data from "../Decors/data.json";
+import popper from "../../assets/images/popper.jpg";
+
+
+
 function Decors() {
   const notify = () => toast("Item Added to cart");
   return (
@@ -22,15 +27,16 @@ function Decors() {
         <hr className="text-light mt-3  bg-light" />
       </div>
       <div className="products container">
-        <Card w={D1} xy0z={notify} />
-        <Card w={D2} xyz={notify} />
-        <Card w={D4} xyz={notify} />
-        <Card w={D1} xyz={notify} />
-        <Card w={D2} xyz={notify} />0
-        <Card w={D4} xyz={notify} />
-        <Card w={D1} xyz={notify} />
-        <Card w={D2} xyz={notify} />
-        <Card w={D4} xyz={notify} />
+      {decor_data.products.map(element => (
+            <Card
+          itemTitle={element.name}
+          itemId={element.id}
+          itemDesc={element.description}
+          itemPrice={element.price}
+          itemPhoto={popper}
+          xyz={notify}
+        />
+        ))}
       </div>
       <Footer />
     </>

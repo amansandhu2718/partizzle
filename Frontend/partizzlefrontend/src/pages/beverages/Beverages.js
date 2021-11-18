@@ -8,7 +8,12 @@ import ABC from "../../assets/images/drinkbg.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../../comps/Footer/Footer";
+import beverages_data from "../home/data.json";
+import coke from "../../assets/images/coke.webp";
 //import { lorem } from "faker/locale/az";
+
+
+
 
 function Beverages(props) {
   const notify = (qty, id, title) => {
@@ -21,6 +26,10 @@ function Beverages(props) {
     props.jk(obj);
     // console.log(obj);
   };
+  
+
+
+
   return (
     <>
       <ToastContainer />
@@ -30,120 +39,18 @@ function Beverages(props) {
         <hr className="text-light mt-3  bg-light" />
       </div>
       <div className="products container">
-        <Card
-          itemTitle="Amandeep"
-          itemId={123456}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={5656}
-          itemPhoto={faker.image.avatar()}
+        
+        
+        {beverages_data.products.map(element => (
+            <Card
+          itemTitle={element.name}
+          itemId={element.id}
+          itemDesc={element.description}
+          itemPrice={element.price}
+          itemPhoto={coke}
           xyz={notify}
         />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemId="456789"
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
-        <Card
-          itemTitle={faker.name.firstName()}
-          itemDesc={faker.lorem.sentence()}
-          itemPrice={faker.commerce.price()}
-          itemPhoto={faker.image.avatar()}
-          xyz={notify}
-        />
+        ))}
       </div>
       <Footer />
     </>

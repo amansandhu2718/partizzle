@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./Login.css";
 import Navbar from "../../comps/header/Navbar";
 import Footer from "../../comps/Footer/Footer";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios"
 
 export default function Login() {
+
+  const history = useHistory();
 
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
@@ -13,7 +15,14 @@ export default function Login() {
 
   const login = () =>{
     const data = {email, password}
-    axios.post("http://localhost:5000/signin",data)
+    axios.post("http://localhost:5000/signin",data).then((res)=>{
+      if (res.data.status==200) {
+        history.push("/")
+      } else {
+        alert("Credentials Doesn't Match")
+        history.push("/login")
+      }
+    })
   };
 
 

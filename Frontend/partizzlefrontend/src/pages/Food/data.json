@@ -1,0 +1,35 @@
+{"products":[{
+    "id":"01",
+    "name":"Burger",
+    "price":"100",
+    "description":"Extra Cheese Burger",
+    "image":"imgdata"},
+
+    {
+        "id":"01",
+        "name":"Burger",
+        "price":"100",
+        "description":"Extra Cheese Burger",
+        "image":"imgdata"
+    },
+
+    {
+            "id":"01",
+            "name":"Burger",
+            "price":"100",
+            "description":"Extra Cheese Burger",
+            "image":"imgdata"
+    },
+    {
+        "id":"01",
+        "name":"Burger",
+        "price":"100",
+        "description":"Extra Cheese Burger",
+        "image":"imgdata"
+}
+            
+    
+    
+
+    
+    ]}
