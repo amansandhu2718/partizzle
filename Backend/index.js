@@ -197,8 +197,9 @@ app.post("/add-data", (req, res) => {
 
 app.get("/beverages", (req, res) => {
   Product.find({category:"drinks"}).then((abc) => {
-    var temp=JSON.stringify(abc);
-    temp = JSON.parse(temp)
+    //var temp=JSON.stringify(abc);
+    //temp = JSON.parse(temp)
+    var temp =abc
     console.log(temp);
     res.send(temp)
   })
