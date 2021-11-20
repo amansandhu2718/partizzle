@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import faker from "faker";
 import Card from "../../comps/card/Card";
 import Navbar from "../../comps/header/Navbar";
@@ -19,7 +19,11 @@ import coke from "../../assets/images/coke.webp";
 
 function Beverages(props) {
  
- 
+  useEffect(() => {
+    getData();
+  },[]);
+
+ let [mydata, setmydata]=useState([]); 
   const notify = (qty, id, title) => {
     toast(`${qty} ${title} Added To Cart`);
     let obj = {
@@ -28,46 +32,22 @@ function Beverages(props) {
       qty: qty,
     };
     props.jk(obj);
-    // console.log(obj);
+   
   };
 
-  var data=5;
+  
   
  function getData() {
   
    Axios.get("http://localhost:5000/beverages").then(res=>{
-    data=res.data;
-    return data;
-})
-
-// fetch("http://localhost:5000/beverages",{
-//   method:"GET",
-//   headers:{
-//     "Content-Type":"application/json"
-//   }
-// }).then(res=>{
-//   if (res.ok) {
-//     return res.json()
-//   }
-//   throw new Error("Anything")
-// }).then(json=>{
-//     console.log(json);
-//     data=json;
-// }).catch(err=>{
-//   console.log(err);
-// })
-
+    setmydata(res.data);
+    })
 
 }
-
-
-data=getData();
-
-console.log(data);
-
-  return (
+return (
     <>
       <ToastContainer />
+      {console.log(mydata)}
       <Navbar />
       <div className="container mt-3">
         <img src={ABC} alt="blaw" className="img-fluid" />
@@ -75,16 +55,18 @@ console.log(data);
       </div>
       <div className="products container">
 
-    {console.log(data)}
-
-      {/* <Card
-          itemTitle={element.name}
-          itemId={element.id}
-          itemDesc={element.description}
-          itemPrice={element.price}
-          itemPhoto={coke}
-          xyz={notify}
-        /> */}
+    
+{mydata.map((element)=>{
+ return(<Card
+ itemTitle={element.name}
+ itemId={element.id}
+ itemDesc={element.description}
+ itemPrice={element.price}
+ itemPhoto={coke}
+ xyz={notify}
+/> )
+})}
+      
 
 
     

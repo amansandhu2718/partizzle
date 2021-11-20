@@ -5,22 +5,31 @@ import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 
 export default function Login() {
-  const history = useHistory();
+//   const history = useHistory();
+//   const [newUser, setNewUser] = useState(
+//     {
+//         name: '',
+//         birthdate: '',
+//         photo: '',
+//     }
+// );
+//   const [name, setName] = useState("");
+//   const [description, setDescription] = useState("");
+//   const [price, setPrice] = useState("");
+//   const [image, setImage] = useState(null);
+//   const [category, setCategory] = useState("");
 
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState("");
-  const [image, setImage] = useState("");
-  const [category, setCategory] = useState("");
+//   const add = () => {
+   
+//     const data = { name, description, price, category,image};
 
-  const add = () => {
-    console.log(category);
-    const data = { name, description, price, category };
-    axios.post("http://localhost:5000/add-data", data).then((res) => {
-      alert("Data Added");
-    });
-  };
+   
+  //   axios.post("http://localhost:5000/add-data", data).then((res) => {
+  //     alert("Data Added");
+  //   });
+  // };
 
+ 
   return (
     <>
       <Navbar />
@@ -31,8 +40,15 @@ export default function Login() {
               <div className="col col-12  col-md-6 col-lg-5 ">
                 <div className="writings my-auto">
                   <h1 className="mainheading">ADD DATA</h1>
-
-                  <form
+                  <form 
+      id='uploadForm' 
+      action='http://localhost:5000/add-data' 
+      method='post' 
+      encType="multipart/form-data">
+        <input type="file" name="sampleFile" />
+        <input type='submit' value='Upload!' />
+    </form>   
+                  {/* <form
                     action=""
                     method="post"
                     className="loginform"
@@ -67,9 +83,16 @@ export default function Login() {
                       className="form-control mt-3"
                       name="avatar"
                       onChange={(event) => {
-                        setImage(event.target.value);
+                        console.log(event.target.files[0]);
+                        setImage(event.target.files[0]);
                       }}
                     />
+                    <input 
+                type="file" 
+                accept=".png, .jpg, .jpeg"
+                name="photo"
+                onChange={handlePhoto}
+            />
                     <select
                       className="form-control mt-3"
                       onChange={(event) => {
@@ -87,7 +110,7 @@ export default function Login() {
                       className="btn btn-lg btn-primary mt-4"
                       onClick={add}
                     />
-                  </form>
+                  </form> */}
                 </div>
               </div>
               <div className="col col-12 col-lg-6 "></div>

@@ -7,7 +7,8 @@ const mongoose = require("mongoose");
 const User=require('./Models/User');
 const Product=require('./Models/Product');
 const validator = require("validator");
-
+const fileUpload = require('express-fileupload');
+app.use(fileUpload());
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -181,17 +182,29 @@ app.post("/signin", (req, res) => {
 });
 
 app.post("/add-data", (req, res) => {
+  let sampleFile;
+  let uploadPath;
+
+  if (!req.files || Object.keys(req.files).length === 0) {
+    return res.status(400).send('No files were uploaded.');
+  }
+
+  // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+  sampleFile = req.files.sampleFile;
+  console.log(sampleFile);
+  
   var data = req.body;
-  console.log(data.category);
+  
   const p1 = new Product({
     name: data.name,
     description: data.description ,
     price:data.price,
-    category:data.category
+    category:data.category,
+    image:JSON.stringify(sampleFile)
   });
   p1.save();
   console.log("Done");
-  res.send({message:"ADDED DATA"})
+res.send("ok");
 });
 
 
@@ -200,7 +213,7 @@ app.get("/beverages", (req, res) => {
     //var temp=JSON.stringify(abc);
     //temp = JSON.parse(temp)
     var temp =abc
-    console.log(temp);
+    // console.log(temp);
     res.send(temp)
   })
 });
