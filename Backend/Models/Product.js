@@ -5,7 +5,7 @@ const productSchema=new mongoose.Schema({
     description:String,
     price:Number,
     category:String,
-    image:String
+    image:{}
 });
 
 const Product=new mongoose.model("Product",productSchema);

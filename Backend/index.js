@@ -182,39 +182,26 @@ app.post("/signin", (req, res) => {
 });
 
 app.post("/add-data", (req, res) => {
-  let sampleFile;
-  let uploadPath;
 
-  if (!req.files || Object.keys(req.files).length === 0) {
-    return res.status(400).send('No files were uploaded.');
-  }
-
-  // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-  sampleFile = req.files.sampleFile;
-  console.log(sampleFile);
-  
-  var data = req.body;
-  
+  let sampleFile=req.files.sampleFile;;
+  let data = req.body;  
   const p1 = new Product({
     name: data.name,
     description: data.description ,
     price:data.price,
     category:data.category,
-    image:JSON.stringify(sampleFile)
+    image: sampleFile
   });
   p1.save();
-  console.log("Done");
-res.send("ok");
+  console.log("saved in db");
+res.redirect("http://localhost:3000/admin");
 });
 
 
 app.get("/beverages", (req, res) => {
-  Product.find({category:"drinks"}).then((abc) => {
-    //var temp=JSON.stringify(abc);
-    //temp = JSON.parse(temp)
-    var temp =abc
-    // console.log(temp);
-    res.send(temp)
+  Product.find({category:"Drinks"}).then((abc) => {
+    var data =abc
+    res.send(data)
   })
 });
 

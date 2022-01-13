@@ -27,7 +27,8 @@ function Card(props) {
           <div className="row g-0">
             <div className=" col-6 col-sm-6 col-md-5  imgcover">
               <img
-                src={props.itemPhoto}
+                //src={props.itemPhoto}
+                src={`data:image/png;base64,${props.itemPhoto.data}`}
                 className=" rounded-start imgcover2"
                 alt="..."
               />
