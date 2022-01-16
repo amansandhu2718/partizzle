@@ -5,7 +5,7 @@ const userSchema=new mongoose.Schema({
     email:String,
     password:String,
     address:String,
-    cart:[{id:String,qty:Number}],
+    cart:[{id:String,qty:Number,desc:String,price:Number,pic:{}}],
     mobile:String,
 });
 

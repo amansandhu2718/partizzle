@@ -6,7 +6,7 @@ import Axios from 'axios';
 
 function Card(props) {
   const [add, setAdd] = useState(true);
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(props.defaultValue);
   
 //  useEffect(() => {
 //     console.log("running of card");
@@ -18,14 +18,15 @@ function Card(props) {
 
 
 function sendReqToCart(){
-  console.log("sendReqToCart function called");
+  
   const email=localStorage.getItem('ID');
   const token=localStorage.getItem('TOKEN');
-  console.log(token);
-  console.log(typeof(token));
   const pname=props.itemTitle;
+  const pdesc=props.itemDesc;
+  const pprice=props.itemPrice;
+  const ppic=props.itemPhoto;  
   const qty=value;
-  const data={email,token,pname,qty};
+  const data={email,token,pname,qty,pdesc,ppic,pprice};
   
   console.log(data);
   
@@ -36,7 +37,7 @@ function sendReqToCart(){
       console.log("added to cart");
     }
     else{
-      alert("Item Not Added to cart")
+      alert("Item Not Added to cart, LOGIN FIRST")
     }
     })
 }
@@ -81,7 +82,7 @@ function sendReqToCart(){
                   <NumberPicker
                     className="helloa"
                     min={0}
-                    defaultValue={0}
+                    defaultValue={props.v}
                     max={20}
                     value={value}
                     onChange={jkq}

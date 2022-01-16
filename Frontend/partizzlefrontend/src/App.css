@@ -20,6 +20,27 @@ body {
   
 }
 
+
+
+.Toastify{
+  position: absolute;
+  z-index: 9999;
+}
+
+
+.Toastify__toast-container{
+position: absolute;
+z-index: 9999;
+}
+
+
+.Toastify__toast-container--top-right{
+  position: absolute;
+  z-index: 9999;
+}
+
+
+
 /* .card-subtitle {
   color: rgba(218, 216, 216, 0.863) !important;
 } */

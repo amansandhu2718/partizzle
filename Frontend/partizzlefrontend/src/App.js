@@ -65,12 +65,16 @@ function App() {
           <Route path="/sign-up" component={Signup} exact />
           <Route
             path="/beverages"
-            render={() => <Beverages />}
+            render={() => <Beverages link="beverages" />}
             exact
           />
           <Route path="/theme" component={Theme} exact />
-          <Route path="/food" component={Food} exact />
-          <Route path="/decors" component={Decors} exact />
+          <Route path="/food" 
+           render={()=> <Beverages link="food"/>}
+           exact />
+          <Route path="/decors" 
+          render={()=> <Beverages link="decors"/>}
+          exact />
           <Route path="/admin" component={Admin} exact/>
           <Route path="/" component={Err} />
         </Switch>

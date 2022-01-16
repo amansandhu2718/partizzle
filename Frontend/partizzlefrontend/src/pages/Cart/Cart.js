@@ -3,8 +3,130 @@ import Navbar from "../../comps/header/Navbar";
 import "./Cart.css";
 import { QuantityPicker } from "react-qty-picker";
 import CartItem from "../../comps/CartItem/CartItem";
+import Axios from 'axios'
+import { useState,useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import Card from "../../comps/card/Card";
+
 
 function Cart(props) {
+
+  var [mydata, setmydata]=useState([]);
+  let [total, setTotal] = useState(0);
+  let [temp, setTemp] = useState(false);
+
+  useEffect(() => {
+    getData();
+  },[]);
+
+  // useEffect(() => {
+  //   getData()
+  // },[mydata]);
+
+
+  function updateTotal(){
+    //getData();
+  }
+
+  function countTotal(mydata){
+    var tt=0
+    for(let i = 0;i<mydata.length;i++){
+        tt=tt+(mydata[i].price*mydata[i].qty);
+    }
+    setTotal(tt);
+  }
+
+
+  function getData() {
+    const loggedIn=localStorage.getItem('ID');
+    if (loggedIn) {
+      Axios.get("http://localhost:5000/cart",{
+        params: {
+          Id: loggedIn
+        }
+      }).then(res=>{
+      console.log(res.data);
+     setmydata(res.data);
+     countTotal(res.data)
+     printcard();
+     })  
+    }
+    else{
+      alert("Login First")
+    }  
+ }
+
+function notify() {
+  
+}
+
+//  const notify = (qty, id, title) => {
+//   toast(`${qty} ${title} Added To Cart`);
+//   let obj = {
+//     prodId: id,
+//     title: title,
+//     qty: qty,
+//   };
+//   //props.jk(obj);
+ 
+// };
+
+
+
+ const printcard = ()=>{
+  console.log(mydata);
+
+  if (mydata.length>0) {
+    const abc = mydata.map((element)=>{
+      if (element.qty>0) {
+        
+      return(<CartItem
+        //update={updateTotal}
+        itemTitle={element.id}
+        //itemId={element.id}
+        itemDesc={element.desc}
+        itemPrice={element.price}
+        itemPhoto={element.pic}
+        itemQty={element.qty}
+        //xyz={notify}
+       /> )
+       
+      // return(<Card
+      //   defaultValue={element.qty}
+      //   itemTitle={element.name}
+      //   itemId={element.id}
+      //   itemDesc={element.description}
+      //   itemPrice={element.price}
+      //   itemPhoto={element.pic}
+      //   xyz={notify}
+      //  />)
+       
+
+      }
+    })
+    
+    return abc;
+  }
+  
+  else{
+    const abc = "Loading..."
+    return abc;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
       <Navbar />
@@ -17,9 +139,7 @@ function Cart(props) {
                 <h1 class="display-6  ">Shopping cart</h1>
 
                 <hr class="my-4" />
-                <CartItem />
-                <CartItem />
-                <CartItem />
+                {printcard()}
               </div>
             </div>
             <div class="col-md-4  hhh">
@@ -30,7 +150,7 @@ function Cart(props) {
                   <hr class="my-4" />
                   <div className="w-100 leftright">
                     <h5> Subtotal</h5>
-                    <h5> 2000 /- RS</h5>
+                    <h5> {total} /- RS</h5>
                   </div>
                   <div className="w-100 leftright">
                     <p> Delivery Charges</p>
@@ -38,13 +158,13 @@ function Cart(props) {
                   </div>
                   <div className="w-100 leftright">
                     <p> Discount</p>
-                    <p> -200 /- RS</p>
+                    <p> 50 /- RS</p>
                   </div>
                   <form action="">
                     <hr class="my-4" />
                     <div className="w-100 leftright">
                       <h5> Total price</h5>
-                      <h5> 1900 /- RS</h5>
+                      <h5> {total+50} /- RS</h5>
                     </div>
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">

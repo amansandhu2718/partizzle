@@ -8,6 +8,7 @@ const User=require('./Models/User');
 const Product=require('./Models/Product');
 const validator = require("validator");
 const fileUpload = require('express-fileupload');
+const bodyParser = require("body-parser");
 app.use(fileUpload());
 
 var storage = multer.diskStorage({
@@ -41,8 +42,9 @@ app.use(cors());
 //   callback(null, corsOptions); // callback expects two parameters: error and options
 // };
 
-app.use(express.json())
-app.use(express.urlencoded({extended : true}))
+// app.use(express.json())
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 mongoose
   .connect("mongodb://localhost:27017/Partizzle", {
@@ -198,20 +200,28 @@ res.redirect("http://localhost:3000/admin");
 });
 
 app.post("/addToCart",(req,res)=>{
-  // const data={email,token,pid,qty};
+  //const data={email,token,pname,qty,pdesc,ppic,pprice};
   const Email=req.body.email;
   const token = req.body.token;
-  const data ={id:req.body.pname,qty:req.body.qty}
+  const data ={id:req.body.pname,qty:req.body.qty,desc:req.body.pdesc,price:req.body.pprice,pic:req.body.ppic}
+  
+  //console.log(req.body);
   
   User.findOne({ email: Email}).then((user)=>{
+    
     if (token=="123abc") {
+      
       var newCart=user.cart;
+      // newCart.desc=req.body.pdesc;
+      // newCart.price=req.body.pprice;
+      // newCart.pic=req.body.ppic;
+      //console.log(newCart);
       var indexOfItem=-1;
 
 
       for (let i = 0; i < newCart.length; i++) {
-        console.log(newCart[i].id);
-        console.log(data.id);
+        //console.log(newCart[i].id);
+        //console.log(data.id);
         if (newCart[i].id==req.body.pname) {
           indexOfItem=i;
           console.log("matched");
@@ -219,12 +229,15 @@ app.post("/addToCart",(req,res)=>{
         }
         
       }
+
+      //console.log(newCart);
       
       newCart[indexOfItem]=data;
       if (indexOfItem==-1){
         newCart.push(data);
       }
       user.cart=newCart;
+      
       user.save(()=>{
         res.send({res:true})
       });
@@ -242,6 +255,29 @@ app.get("/beverages", (req, res) => {
   Product.find({category:"Drinks"}).then((abc) => {
     var data =abc
     res.send(data)
+  })
+});
+
+app.get("/food", (req, res) => {
+  Product.find({category:"Food"}).then((abc) => {
+    var data =abc
+    res.send(data)
+  })
+});
+
+app.get("/decors", (req, res) => {
+  Product.find({category:"Decor"}).then((abc) => {
+    var data =abc
+    res.send(data)
+  })
+});
+
+
+app.get("/cart", (req, res) => {
+  const Email=req.query.Id;
+  console.log(Email);
+  User.findOne({ email: Email}).then((user) => {
+    res.send(user.cart)
   })
 });
 

@@ -13,7 +13,7 @@ import coke from "../../assets/images/coke.webp";
 
 
 
-function Beverages() {
+function Beverages(props) {
  
   useEffect(() => {
     console.log("running");
@@ -40,6 +40,7 @@ function Beverages() {
     if (mydata.length>0) {
       const abc = mydata.map((element)=>{
         return(<Card
+        defaultValue={0}
         itemTitle={element.name}
         itemId={element.id}
         itemDesc={element.description}
@@ -58,7 +59,7 @@ function Beverages() {
   
  function getData() {
   
-   Axios.get("http://localhost:5000/beverages").then(res=>{
+   Axios.get(`http://localhost:5000/${props.link}`).then(res=>{
      console.log(res.data);
     setmydata(res.data);
     })
