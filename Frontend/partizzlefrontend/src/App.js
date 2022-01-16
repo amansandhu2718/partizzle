@@ -22,36 +22,36 @@ function App() {
     { prodId: 134, title: "three", qty: 3 },
   ];
 
-  let updateCart = (obj) => {
-    console.log(obj.prodId);
+  // let updateCart = (obj) => {
+  //   console.log(obj.prodId);
 
-    arr.forEach((e) => {
-      if (e.prodId === obj.prodId) {
-        if (e.qty === obj.qty) {
-        } else {
-          if (obj.qty == 0) {
-            console.log("zero");
+  //   arr.forEach((e) => {
+  //     if (e.prodId === obj.prodId) {
+  //       if (e.qty === obj.qty) {
+  //       } else {
+  //         if (obj.qty == 0) {
+  //           console.log("zero");
 
-            let pos = arr.indexOf(e);
-            console.log("**************");
-            console.log(arr);
-            console.log(pos);
-            arr.splice(pos, 1);
+  //           let pos = arr.indexOf(e);
+  //           console.log("**************");
+  //           console.log(arr);
+  //           console.log(pos);
+  //           arr.splice(pos, 1);
 
-            console.log(arr);
-            console.log("**************");
-          } else {
-            e.qty = obj.qty;
-            console.log("updated");
-            console.log(e.qty);
-          }
-        }
-      } else if (e.prodId != obj.prodId) {
-        arr.push(obj);
-        console.log("pushed");
-      }
-    });
-  };
+  //           console.log(arr);
+  //           console.log("**************");
+  //         } else {
+  //           e.qty = obj.qty;
+  //           console.log("updated");
+  //           console.log(e.qty);
+  //         }
+  //       }
+  //     } else if (e.prodId != obj.prodId) {
+  //       arr.push(obj);
+  //       console.log("pushed");
+  //     }
+  //   });
+  // };
 
   return (
     <>
@@ -65,7 +65,7 @@ function App() {
           <Route path="/sign-up" component={Signup} exact />
           <Route
             path="/beverages"
-            render={() => <Beverages jk={updateCart} />}
+            render={() => <Beverages />}
             exact
           />
           <Route path="/theme" component={Theme} exact />

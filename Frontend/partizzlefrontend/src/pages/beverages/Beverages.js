@@ -13,7 +13,7 @@ import coke from "../../assets/images/coke.webp";
 
 
 
-function Beverages(props) {
+function Beverages() {
  
   useEffect(() => {
     console.log("running");
@@ -21,14 +21,15 @@ function Beverages(props) {
   },[]);
 
  let [mydata, setmydata]=useState([]); 
-  const notify = (qty, id, title) => {
+  
+ const notify = (qty, id, title) => {
     toast(`${qty} ${title} Added To Cart`);
     let obj = {
       prodId: id,
       title: title,
       qty: qty,
     };
-    props.jk(obj);
+    //props.jk(obj);
    
   };
 

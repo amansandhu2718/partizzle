@@ -171,11 +171,11 @@ app.post("/signin", (req, res) => {
     User.findOne({ email: Email, password: Password }).then((user) => {
       if (user) {
         console.log(`${user.email} Logged In Successfully`);
-        res.send({status:200})
+        res.send({res:true,statusCode:200,token:"123abc"})
       }
       else{
         console.log("PASSWORD OR EMAIL DOESN'T MATCH");
-        res.send();
+        res.send({res:false,statusCode:460})
       }
     })
   }
@@ -196,6 +196,46 @@ app.post("/add-data", (req, res) => {
   console.log("saved in db");
 res.redirect("http://localhost:3000/admin");
 });
+
+app.post("/addToCart",(req,res)=>{
+  // const data={email,token,pid,qty};
+  const Email=req.body.email;
+  const token = req.body.token;
+  const data ={id:req.body.pname,qty:req.body.qty}
+  
+  User.findOne({ email: Email}).then((user)=>{
+    if (token=="123abc") {
+      var newCart=user.cart;
+      var indexOfItem=-1;
+
+
+      for (let i = 0; i < newCart.length; i++) {
+        console.log(newCart[i].id);
+        console.log(data.id);
+        if (newCart[i].id==req.body.pname) {
+          indexOfItem=i;
+          console.log("matched");
+          break;
+        }
+        
+      }
+      
+      newCart[indexOfItem]=data;
+      if (indexOfItem==-1){
+        newCart.push(data);
+      }
+      user.cart=newCart;
+      user.save(()=>{
+        res.send({res:true})
+      });
+      return
+    }
+    else{
+      res.send({res:false})
+      return
+    }
+  })
+})
 
 
 app.get("/beverages", (req, res) => {

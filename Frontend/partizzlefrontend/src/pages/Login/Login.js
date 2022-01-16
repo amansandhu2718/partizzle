@@ -16,7 +16,10 @@ export default function Login() {
   const login = () =>{
     const data = {email, password}
     axios.post("http://localhost:5000/signin",data).then((res)=>{
-      if (res.data.status==200) {
+      const mytoken = res.data.token;
+      if (res.data.statusCode==200 && res.data.res==true) {
+        localStorage.setItem('ID', email);
+        localStorage.setItem('TOKEN', mytoken);
         history.push("/")
       } else {
         alert("Credentials Doesn't Match")
