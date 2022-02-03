@@ -22,7 +22,12 @@ function Cart(props) {
   // useEffect(() => {
   //   getData()
   // },[mydata]);
-
+ function  checkorder(){
+   if(mydata.length!=0){
+     alert("Order placed..!!");
+     
+   }
+ }
 
   function updateTotal(){
     //getData();
@@ -186,13 +191,14 @@ function notify() {
                       </select>
                     </div>
                     <p class="lead mt-3">
-                      <a
+                      <button
+onClick={checkorder}
                         class="btn btn-primary btn-lg w-100"
                         href="#"
                         role="button"
                       >
                         Checkout
-                      </a>
+                      </button>
                     </p>
                   </form>
                 </div>

@@ -80,8 +80,9 @@ app.post("/signup", (req, res) => {
   const saveData = function () {
     User.findOne({ email: userEmail }).then((user) => {
       if (user) {
-        res.redirect("/signup");
+        // res.redirect("/signup");
         console.log("E-mail already in use");
+        return "E-mail already in use";
       } else {
         //var user = mongoose.model("user", usersSchema);
         const u1 = new User({
@@ -93,9 +94,12 @@ app.post("/signup", (req, res) => {
         });
         u1.save();
         console.log("USER REGISTRATION SUCCESFULL");
-        res.send({status:200})
+        // res.send({status:200})
+        return "1";
       }
+    
     });
+    return "1"; //need to fix
   };
 
    // validation function for validation of form data
@@ -110,26 +114,42 @@ app.post("/signup", (req, res) => {
           if (validator.isStrongPassword(userPassword)) {
             if (userPassword == userCpassword) {
               console.log("password is valid and strong");
-              saveData();
+              let result=saveData();
+              console.log(result);
+              return result;
             } else {
               console.log("user password mismatched");
+              return "user password mismatched"
             }
           } else {
             console.log("password must contain minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1 ");
+            return "password must contain minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1";
           }
         } else {
           console.log("location too large it must be in 25 characters");
+          return "location too large it must be in 25 characters";
         }
       } else {
         console.log("enter valid email");
+        return "enter valid email";
       }
     } else {
       console.log("name is not valid");
+      return "name is not valid";
     }
   };
 
 
   // checking fields are null or not
+const result= CheckIfNull();
+if(result=="1"){
+          res.send({status:200})
+ 
+}else{
+           res.send({status:462,msg:result});
+}
+
+function CheckIfNull(){
   if (userName != "") {
     if (userEmail != "") {
       if (userLocation != "") {
@@ -137,25 +157,37 @@ app.post("/signup", (req, res) => {
           if (userCpassword != "") {
             if (userPassword == userCpassword) {
               console.log("running validation");
-              myvalidation(); //calling validation function if fields are filled properly
+              const result=myvalidation(); //calling validation function if fields are filled properly
+                              if(result=="1"){
+                                return "1";
+                              }else{
+                                 return result;
+                              }
             } else {
               console.log("password doesnt matched");
+              return "password doesnt matched";
             }
           } else {
             console.log("confirm your password");
+            return "confirm your password";
           }
         } else {
           console.log("password required");
+          return "password required";
         }
       } else {
         console.log("location required");
+        return "location required";
       }
     } else {
       console.log("email required");
+      return "email required";
     }
   } else {
     console.log("username required");
+    return "username required";
   }
+}
 
 });
 

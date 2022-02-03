@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
+
 export default class Footer extends Component {
   render() {
     return (
@@ -49,43 +51,78 @@ export default class Footer extends Component {
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Services</h6>
                   <p>
-                    <a href="#!" className="text-reset">
-                      Decoration
-                    </a>
+                   
+                    <Link
+                  to="/decors"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >DECORATION              
+                  </Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
-                      Imported Beverages
-                    </a>
+                        
+                  <Link
+                  to="/beverages"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us">
+                    Beverages              
+                  </Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
-                      Delicious Cuisines
-                    </a>
+                       
+                  <Link
+                  to="/food"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >Food              
+                  </Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
-                      Theme Parties
-                    </a>
+                      
+                  <Link
+                  to="/theme"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >Theme              
+                  </Link>
                   </p>
                 </div>
 
                 <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                   <p>
-                    <a href="#!" className="text-reset">
-                      Pricing
-                    </a>
+                        
+                  <Link
+                  to="/"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >HOME              
+                  </Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
-                      About
-                    </a>
+                         
+                  <Link
+                  to="/contact"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >Contact              
+                  </Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
-                      Cart
-                    </a>
+                        
+                  <Link
+                  to="/cart"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Contact Us"
+                >Cart              
+                  </Link>
                   </p>
                 </div>
 

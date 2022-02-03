@@ -26,11 +26,12 @@ export default function Signup() {
       if (res.data.status==200) {
         history.push("/login")
       }else{
-        history.push("/sign-up")
+        console.log(res.data.status);
+        alert(res.data.msg);
+        // history.push("/sign-up")
       }
     })
   };
-
 
 
   return (

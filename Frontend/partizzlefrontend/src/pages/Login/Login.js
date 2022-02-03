@@ -4,9 +4,12 @@ import Navbar from "../../comps/header/Navbar";
 import Footer from "../../comps/Footer/Footer";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios"
+import { useEffect } from "react";
 
 export default function Login() {
-
+  useEffect(() => {
+    checkloggedIn();
+  },[]);
   const history = useHistory();
 
   const [email , setEmail] = useState("")
@@ -21,18 +24,31 @@ export default function Login() {
         localStorage.setItem('ID', email);
         localStorage.setItem('TOKEN', mytoken);
         history.push("/")
+        window.location.reload(false);
+
       } else {
         alert("Credentials Doesn't Match")
         history.push("/login")
+
       }
     })
   };
 
-
+  function checkloggedIn(){
+    
+      let loggedIn=localStorage.getItem('ID');
+      if (loggedIn) {
+        history.push("/profile")
+      }
+        
+   
+  }
 
   return (
     
             <>
+{/* 
+            {checkloggedIn} */}
         <Navbar />
         <div className="loginbgg">
           <section>

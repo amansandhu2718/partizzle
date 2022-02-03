@@ -1,8 +1,23 @@
 import "./Navbar.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+let loggedInUser=WhoisLoggedin();
+function WhoisLoggedin(){
+  let loggedIn=localStorage.getItem('ID');
+  if (loggedIn) {
+  }else{
+    loggedIn="LOGIN"
+  }
+    
+    return loggedIn 
+ 
+}
 function Navbar() {
+  useEffect(() => {
+   WhoisLoggedin();
+  },[loggedInUser]);
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark ok">
@@ -111,7 +126,7 @@ function Navbar() {
                   data-placement="bottom"
                   title="Contact Us"
                 >
-                  <i className="fas fa-user fa-lg mx-2"></i>Profile
+                  <i className="fas fa-user fa-lg mx-2"></i>{loggedInUser}
                 </Link>
               </motion.div>
             </div>
